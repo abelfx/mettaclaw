@@ -1,8 +1,10 @@
-import os, openai
+import os
+import time
+import openai
 
-FREEMODEL_CLIENT = openai.OpenAI(
-    api_key=os.environ.get("FREEMODEL_API_KEY", os.environ.get("OPENROUTER_API_KEY")),
-    base_url="https://api.freemodel.dev/v1"
+OPENROUTER_CLIENT = openai.OpenAI(
+    api_key=os.environ["OPENROUTER_API_KEY"],
+    base_url="https://openrouter.ai/api/v1"
 )
 
 ASI_CLIENT = openai.OpenAI(
@@ -18,7 +20,7 @@ ANTHROPIC_CLIENT = openai.OpenAI(
 def _clean(text):
     return text.replace("_quote_", '"').replace("_apostrophe_", "'")
 
-def _chat(client, model, content, max_tokens=2000, max_retries=5, retry_delay=1):
+def _chat(client, model, content, max_tokens=3000, max_retries=5, retry_delay=1):
     content = content.replace("<tool_call>","").replace("<arg_value>"," ").replace("</tool_call>"," ").replace("</arg_value>","")
     sysmsg, usermsg = content.split(":-:-:-:", 1)
 
@@ -30,12 +32,12 @@ def _chat(client, model, content, max_tokens=2000, max_retries=5, retry_delay=1)
             model=model,
             messages=[{"role": "system", "content": sysmsg},
                       {"role": "user", "content": usermsg}],
-            max_tokens=max_tokens
+            max_tokens=max_tokens,
         )
 
         text = resp.choices[0].message.content
 
-        if text is not None:
+        if text is not None and str(text).strip() != "":
             return _clean(text)
 
         time.sleep(retry_delay)
@@ -44,8 +46,8 @@ def _chat(client, model, content, max_tokens=2000, max_retries=5, retry_delay=1)
 
 def useOpenRouter(content):
     return _chat(
-        client=FREEMODEL_CLIENT,
-        model="gpt-4o",
+        client=OPENROUTER_CLIENT,
+        model=os.environ.get("OPENROUTER_MODEL", "openai/gpt-oss-20b:free"),
         content=content
     )
 
