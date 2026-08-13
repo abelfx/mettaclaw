@@ -4,7 +4,7 @@
     "- Query long-term embedding memory for skills and memories with short phrases only: query string"
     "- Episodes searches history for episodes around a time stamp, time format is same as in TIME: episodes %Y-%m-%d %H:%M:%S"
     "- Pin a certain string as short-term working memory item to keep track of task state: pin string"
-    "- Set ONE fluid-attention goal concept: focus-attention concept  EXAMPLE: focus-attention mosquito"
+    "- Set fluid-attention goals: prefer TWO args focus-attention concept1 concept2; ONE arg focus-attention concept only if a second valid name is unavailable. EXAMPLE: focus-attention mosquito abamectin"
     "- Promote a memory that you found useful, to make it easier to be recalled in the future in similar context: promote time_string"
     "- Demote a memory that you do not find useful or not anymore, to remove its promotion advantage: demote time_string"
     ;SHELL AND FILE I/O:
@@ -64,6 +64,15 @@
                 ($_2 (add-atom &goalspace (Goal $concept)))
               )
               (py-str ("Goal set: " $concept)))))
+
+(= (focus-attention $concept1 $concept2)
+    (with_mutex goalspace_mutex
+        (let* (
+                ($_1 (collapse (match &goalspace (Goal $c) (remove-atom &goalspace (Goal $c)))))
+                ($_2 (add-atom &goalspace (Goal $concept1)))
+                ($_3 (add-atom &goalspace (Goal $concept2)))
+              )
+              (py-str ("Goals set: " $concept1 " " $concept2)))))
 
 (= (export! $space $file)
    (progn (write-file $file "")

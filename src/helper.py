@@ -134,6 +134,28 @@ def sanitize_focus_concept(raw):
     return m.group(0) if m else ""
 
 
+def parse_focus_concepts(rest, n=2):
+    """Extract up to n distinct bare concept names from a focus-attention arg string."""
+    if rest is None:
+        return []
+    s = normalize_string(rest).strip()
+    if not s:
+        return []
+    for marker in _PROMPT_BLEED_MARKERS:
+        idx = s.find(marker)
+        if idx >= 0:
+            s = s[:idx]
+    s = s.replace("\r", "\n").split("\n", 1)[0].strip()
+    concepts = []
+    for quoted, bare in re.findall(r'"([^"]+)"|(\S+)', s):
+        concept = sanitize_focus_concept(quoted or bare)
+        if concept and concept not in concepts:
+            concepts.append(concept)
+        if len(concepts) >= n:
+            break
+    return concepts
+
+
 def balance_parentheses(s):
     s = s.replace("_quote_", '"').replace("_newline_", "\n")
     sexprs = []
@@ -160,9 +182,13 @@ def balance_parentheses(s):
         if cmd not in LLM_COMMANDS:
             continue
         if cmd == "focus-attention":
-            concept = sanitize_focus_concept(rest)
-            if concept:
-                sexprs.append(f"(focus-attention {quote_arg(concept)})")
+            concepts = parse_focus_concepts(rest, 2)
+            if len(concepts) >= 2:
+                sexprs.append(
+                    f"(focus-attention {quote_arg(concepts[0])} {quote_arg(concepts[1])})"
+                )
+            elif len(concepts) == 1:
+                sexprs.append(f"(focus-attention {quote_arg(concepts[0])})")
             continue
         if cmd in special_two_arg_cmds:
             if not rest:
@@ -229,11 +255,15 @@ def test_balance_parenthesis():
     assert balance_parentheses('write-file "test.txt" "hello world"') == '((write-file "test.txt" "hello world"))'
     assert balance_parentheses('write-file test.txt "hello world"') == '((write-file "test.txt" "hello world"))'
     assert balance_parentheses('send test.xt hello world') == '((send "test.xt hello world"))'
+    # bleed with only one recoverable name -> keep 1-arg fallback
     bleed = 'focus-attention "peaweevils  \nLAST_SKILL_USE_RESULTS:  \nHISTORY:  \nCURRENT_ATTENTIONAL_FOCUS: [\'ant\']"'
     assert balance_parentheses(bleed) == '((focus-attention "peaweevils"))'
-    assert balance_parentheses('focus-attention jassid:12') == '((focus-attention "jassid"))'
-    assert balance_parentheses('(SETTLE(in-AF, "starved)")\nfocus-attention jassid') == '((focus-attention "jassid"))'
+    assert balance_parentheses('focus-attention jassid:12 ant:3') == '((focus-attention "jassid" "ant"))'
+    assert balance_parentheses('focus-attention peaweevils ant') == '((focus-attention "peaweevils" "ant"))'
+    assert balance_parentheses('(SETTLE(in-AF, "starved)")\nfocus-attention jassid moth') == '((focus-attention "jassid" "moth"))'
     assert sanitize_focus_concept('peaweevils\nLAST_SKILL_USE_RESULTS:') == 'peaweevils'
+    assert parse_focus_concepts('alcohol:282 nicotine:93', 2) == ['alcohol', 'nicotine']
+    assert balance_parentheses('focus-attention onlyone') == '((focus-attention "onlyone"))'
 
 _PROMOTION_CONN = None
 
