@@ -97,6 +97,43 @@ def around_time(needle_time_str, k):
         ret += f"{lineno}:{line}"
     return ret
 
+# Prompt-field labels free models often echo into focus-attention args.
+_PROMPT_BLEED_MARKERS = (
+    "LAST_SKILL_USE_RESULTS",
+    "HISTORY:",
+    "MOST_PROMOTED_MEMORIES",
+    "CURRENT_ATTENTIONAL_FOCUS",
+    "GOAL_CANDIDATES",
+    "GOAL_RULES",
+    "OUTPUT_FORMAT",
+    "CRITICAL",
+    "FLOW:",
+    "TIME:",
+)
+
+def sanitize_focus_concept(raw):
+    """Keep only a bare concept name; drop prompt echo / :sti suffixes / newlines."""
+    if raw is None:
+        return ""
+    s = normalize_string(raw).strip()
+    if not s:
+        return ""
+    for marker in _PROMPT_BLEED_MARKERS:
+        idx = s.find(marker)
+        if idx >= 0:
+            s = s[:idx]
+    s = s.replace("\r", "\n")
+    s = s.split("\n", 1)[0].strip()
+    if (s.startswith('"') and s.endswith('"')) or (s.startswith("'") and s.endswith("'")):
+        s = s[1:-1].strip()
+    s = s.split(maxsplit=1)[0] if s else ""
+    s = s.strip("\"'()[]{},")
+    if ":" in s:
+        s = s.split(":", 1)[0]
+    m = re.match(r"^[A-Za-z][A-Za-z0-9_]*$", s)
+    return m.group(0) if m else ""
+
+
 def balance_parentheses(s):
     s = s.replace("_quote_", '"').replace("_newline_", "\n")
     sexprs = []
@@ -119,6 +156,14 @@ def balance_parentheses(s):
             continue
         cmd = parts[0]
         rest = parts[1].strip() if len(parts) > 1 else ""
+        # Reject hallucinated cmds like SETTLE(in-AF, ...) so sread does not fail the whole batch
+        if cmd not in LLM_COMMANDS:
+            continue
+        if cmd == "focus-attention":
+            concept = sanitize_focus_concept(rest)
+            if concept:
+                sexprs.append(f"(focus-attention {quote_arg(concept)})")
+            continue
         if cmd in special_two_arg_cmds:
             if not rest:
                 sexprs.append(f"({cmd})")
@@ -184,6 +229,11 @@ def test_balance_parenthesis():
     assert balance_parentheses('write-file "test.txt" "hello world"') == '((write-file "test.txt" "hello world"))'
     assert balance_parentheses('write-file test.txt "hello world"') == '((write-file "test.txt" "hello world"))'
     assert balance_parentheses('send test.xt hello world') == '((send "test.xt hello world"))'
+    bleed = 'focus-attention "peaweevils  \nLAST_SKILL_USE_RESULTS:  \nHISTORY:  \nCURRENT_ATTENTIONAL_FOCUS: [\'ant\']"'
+    assert balance_parentheses(bleed) == '((focus-attention "peaweevils"))'
+    assert balance_parentheses('focus-attention jassid:12') == '((focus-attention "jassid"))'
+    assert balance_parentheses('(SETTLE(in-AF, "starved)")\nfocus-attention jassid') == '((focus-attention "jassid"))'
+    assert sanitize_focus_concept('peaweevils\nLAST_SKILL_USE_RESULTS:') == 'peaweevils'
 
 _PROMOTION_CONN = None
 
