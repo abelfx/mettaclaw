@@ -22,6 +22,7 @@ def _clean(text):
 
 def _chat(client, model, content, max_tokens=3000, max_retries=5, retry_delay=1):
     content = content.replace("<tool_call>","").replace("<arg_value>"," ").replace("</tool_call>"," ").replace("</arg_value>","")
+    content = content.replace("_newline_", "\n").replace("_apostrophe_", "'").replace("_quote_", '"')
     sysmsg, usermsg = content.split(":-:-:-:", 1)
 
     if not usermsg.strip():

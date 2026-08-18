@@ -51,8 +51,9 @@
                          " R4 otherwise                  -> EXPAND from GRAPH_FRONTIER (grow the frontier)" (newline)
                          " TIME: " (get_time_as_string) (newline)
                          " OUTPUT_FORMAT: emit exactly two lines then STOP. Prefer the two-arg form." (newline)
-                         " pin R4 expand" (newline)
-                         " focus-attention trichlorophenol bendiocarb"))))
+                         " pin <RULE_NAME>" (newline)
+                         " focus-attention <concept_name_1> <concept_name_2>" (newline)
+                         " CRITICAL: NEVER emit placeholder text like <concept_name_1>. Pick real concept names strictly from GRAPH_FRONTIER (for R1/R4) or CURRENT_ATTENTIONAL_FOCUS (for R2/R3)."))))
 
 (= (HandleError $msg $cmd $sexpr)
    (case $sexpr (((Error $a $b) (let $new (append (get-state &error) (($msg $cmd)))
