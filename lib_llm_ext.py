@@ -48,7 +48,7 @@ def _chat(client, model, content, max_tokens=3000, max_retries=5, retry_delay=1)
 def useOpenRouter(content):
     return _chat(
         client=OPENROUTER_CLIENT,
-        model=os.environ.get("OPENROUTER_MODEL", "openai/gpt-oss-20b:free"),
+        model=os.environ.get("OPENROUTER_MODEL", "openrouter/free"),
         content=content
     )
 
