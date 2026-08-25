@@ -1,62 +1,88 @@
 import os, openai
 
 OPENROUTER_CLIENT = openai.OpenAI(
-    api_key=os.environ["OPENROUTER_API_KEY"],
+    api_key=os.environ.get("OPENROUTER_API_KEY") or "dummy",
     base_url="https://openrouter.ai/api/v1"
 )
 
 ASI_CLIENT = openai.OpenAI(
-    api_key=os.environ["ASI_API_KEY"],
+    api_key=os.environ.get("ASI_API_KEY") or "dummy",
     base_url="https://inference.asicloud.cudos.org/v1"
 )
 
 ANTHROPIC_CLIENT = openai.OpenAI(
-    api_key=os.environ["ANTHROPIC_API_KEY"],
+    api_key=os.environ.get("ANTHROPIC_API_KEY") or "dummy",
     base_url="https://api.anthropic.com/v1/"
 )
+
+OLLAMA_HOST = os.environ.get("OLLAMA_HOST", "https://jupyterhub.k8s.naint.tech/user/ynigusse/proxy/11434")
+OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "qwen2.5:32b")
+JUPYTERHUB_API_TOKEN = os.environ.get("JUPYTERHUB_API_TOKEN", "25aefc90a1564f9d91d27728a13a3a7e")
 
 def _clean(text):
     return text.replace("_quote_", '"').replace("_apostrophe_", "'")
 
 def _chat(client, model, content, max_tokens=6000, max_retries=5, retry_delay=1):
     content = content.replace("<tool_call>","").replace("<arg_value>"," ").replace("</tool_call>"," ").replace("</arg_value>","")
+    content = content.replace("_newline_", "\n").replace("_apostrophe_", "'").replace("_quote_", '"')
     sysmsg, usermsg = content.split(":-:-:-:", 1)
 
     if not usermsg.strip():
         usermsg = "EMPTY / NO NEW USER INPUT."
 
     for attempt in range(max_retries):
-        resp = client.chat.completions.create(
-            model=model,
-            messages=[{"role": "system", "content": sysmsg},
-                      {"role": "user", "content": usermsg}],
-            max_tokens=max_tokens,
-            extra_body={
+        kwargs = {
+            "model": model,
+            "messages": [{"role": "system", "content": sysmsg},
+                         {"role": "user", "content": usermsg}],
+            "max_tokens": max_tokens,
+        }
+        if "glm" in model.lower():
+            kwargs["extra_body"] = {
                 "enable_thinking": True,
-                "thinking_budget": 6000
+                "thinking_budget": max_tokens
             }
-        )
+
+        resp = client.chat.completions.create(**kwargs)
 
         text = resp.choices[0].message.content
 
-        if text is not None:
+        if text is not None and str(text).strip() != "":
             return _clean(text)
 
         time.sleep(retry_delay)
 
     raise RuntimeError("LLM returned None after all retry attempts")
 
+def useOllama(content):
+    host = os.environ.get("OLLAMA_HOST", OLLAMA_HOST).rstrip("/")
+    headers = {}
+    token = os.environ.get("JUPYTERHUB_API_TOKEN", JUPYTERHUB_API_TOKEN)
+    if token and token != "ollama":
+        headers["Authorization"] = f"token {token}"
+
+    client = openai.OpenAI(
+        api_key=token or "ollama",
+        base_url=f"{host}/v1",
+        default_headers=headers if headers else None
+    )
+    return _chat(
+        client=client,
+        model=os.environ.get("OLLAMA_MODEL", OLLAMA_MODEL),
+        content=content
+    )
+
 def useOpenRouter(content):
     return _chat(
         client=OPENROUTER_CLIENT,
-        model="z-ai/glm-5.2",  # replace with your OpenRouter model id
+        model=os.environ.get("OPENROUTER_MODEL", "openrouter/free"),
         content=content
     )
 
 def useMiniMax(content):
     return _chat(
         client=ASI_CLIENT,
-        model="minimax/minimax-m2.7", #"minimax/minimax-m2.7", #"asi1-mini",
+        model="minimax/minimax-m2.7",
         content=content
     )
 
