@@ -14,6 +14,7 @@
 !(import! &self (library mettaclaw ./src/skills))
 !(import! &self (library mettaclaw ./src/memory))
 !(import! &self (library mettaclaw ./src/context))
+!(import! &self (library mettaclaw ./src/ecan_filter))
 !(import! &self (library mettaclaw ./src/loop))
 !(git-import! "https://github.com/patham9/petta_lib_chromadb.git")
 !(import! &self (library petta_lib_chromadb lib_chromadb))

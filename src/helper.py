@@ -272,6 +272,100 @@ def promotion_close_map():
         _PROMOTION_CONN.close()
         _PROMOTION_CONN = None
 
+def tokenize_text(text: str) -> list[str]:
+    if not text or not isinstance(text, str):
+        return []
+    words = re.findall(r"[a-zA-Z0-9_-]+", text.lower())
+    stopwords = {"the", "and", "for", "are", "but", "not", "you", "all", "any", "can", "her", "was", "one", "our", "out", "day", "get", "has", "him", "his", "how", "man", "new", "now", "old", "see", "two", "way", "who", "boy", "did", "its", "let", "put", "say", "she", "too", "use", "this", "that", "with", "from", "have"}
+    return [w for w in words if len(w) > 2 and w not in stopwords][:10]
+
+def _log_ecan_file(event_type: str, details: dict):
+    try:
+        log_path = os.path.join(os.path.dirname(__file__), "..", "memory", "ecan_debug.log")
+        ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        lines = [f"[{ts}] [{event_type}]"]
+        for k, v in details.items():
+            lines.append(f"  {k}: {v}")
+        lines.append("-" * 60)
+        with open(log_path, "a", encoding="utf-8") as f:
+            f.write("\n".join(lines) + "\n")
+    except Exception as e:
+        print(f"ERROR in _log_ecan_file: {e}")
+
+def log_ecan_sensory(msg: str, tokens, af_state: str):
+    _log_ecan_file("SENSORY_STIMULATION", {
+        "user_message": msg,
+        "extracted_tokens": repr(tokens),
+        "af_state_after": af_state
+    })
+    return True
+
+def log_ecan_decay(af_before: str, af_after: str):
+    _log_ecan_file("ATTENTION_DECAY", {
+        "af_before_decay": af_before,
+        "af_after_decay": af_after
+    })
+    return True
+
+def filter_history_by_af(history_str: str, af_concepts_str: str, max_chars: int = 3000) -> str:
+    """Filter history entries keeping only those relevant to attentional focus concepts.
+    If AF is empty/none, returns only the last 2 recent entries."""
+    if not history_str or not isinstance(history_str, str):
+        return ""
+    entries = [e.strip() for e in re.split(r'(?=\([\s\"\'_quote_]*20\d{2}-\d{2}-\d{2})', history_str) if e.strip()]
+    if not entries:
+        entries = [e.strip() for e in history_str.split('\n') if e.strip()]
+    if not entries:
+        return ""
+    recent = entries[-2:] if len(entries) >= 2 else entries
+    if not af_concepts_str or af_concepts_str == "none" or not isinstance(af_concepts_str, str):
+        result = "\n".join(recent)
+        _log_ecan_file("HISTORY_FILTER", {
+            "mode": "FALLBACK_RECENT_ONLY",
+            "active_af_concepts": "none",
+            "total_entries_in_history": len(entries),
+            "kept_entries_count": len(recent),
+            "raw_history_chars": len(history_str),
+            "output_chars": min(len(result), max_chars)
+        })
+        return result[-max_chars:] if len(result) > max_chars else result
+    concepts = set(re.findall(r'\(\s*concept\s+(?:_quote_|\"|\')*([a-zA-Z0-9_-]+?)(?:_quote_|\"|\')*\s*\)', af_concepts_str, re.IGNORECASE))
+    if not concepts:
+        words = set(re.findall(r'[a-zA-Z_-]+', af_concepts_str.lower()))
+        concepts = {w for w in words if len(w) > 2 and w not in {'concept', 'none', 'true', 'false'}}
+    if not concepts:
+        result = "\n".join(recent)
+        _log_ecan_file("HISTORY_FILTER", {
+            "mode": "FALLBACK_NO_CONCEPTS_PARSED",
+            "raw_af_string": af_concepts_str,
+            "total_entries": len(entries),
+            "kept_entries_count": len(recent),
+            "output_chars": min(len(result), max_chars)
+        })
+        return result[-max_chars:] if len(result) > max_chars else result
+    kept = []
+    for entry in entries:
+        entry_lower = entry.lower()
+        if any(c.lower() in entry_lower for c in concepts):
+            kept.append(entry)
+    seen = set()
+    merged = []
+    for e in kept + recent:
+        if e not in seen:
+            seen.add(e)
+            merged.append(e)
+    result = "\n".join(merged)
+    _log_ecan_file("HISTORY_FILTER", {
+        "mode": "AF_ATTENTION_FILTERED",
+        "active_af_concepts": list(concepts),
+        "total_entries_in_history": len(entries),
+        "af_matched_entries_count": len(kept),
+        "total_entries_in_prompt": len(merged),
+        "raw_history_chars": len(history_str),
+        "output_chars": min(len(result), max_chars)
+    })
+    return result[-max_chars:] if len(result) > max_chars else result
+
 if __name__ == "__main__":
     test_balance_parenthesis()
     path = "test.db"

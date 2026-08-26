@@ -1,0 +1,669 @@
+[2026-08-25 14:40:55] [HISTORY_FILTER]
+  mode: AF_ATTENTION_FILTERED
+  active_af_concepts: ['rome']
+  total_entries_in_history: 1
+  af_matched_entries_count: 1
+  total_entries_in_prompt: 1
+  raw_history_chars: 44
+  output_chars: 44
+------------------------------------------------------------
+[2026-08-25 14:40:55] [SENSORY_STIMULATION]
+  user_message: what is rome
+  extracted_tokens: ['rome']
+  af_state_after: ((Concept rome) 500.0)
+------------------------------------------------------------
+[2026-08-25 14:40:55] [ATTENTION_DECAY]
+  af_before_decay: ((Concept rome) 500.0)
+  af_after_decay: ((Concept rome) 350.0)
+------------------------------------------------------------
+[2026-08-25 14:41:24] [HISTORY_FILTER]
+  mode: FALLBACK_RECENT_ONLY
+  active_af_concepts: none
+  total_entries_in_history: 4
+  kept_entries_count: 2
+  raw_history_chars: 3000
+  output_chars: 1491
+------------------------------------------------------------
+[2026-08-26 10:09:35] [HISTORY_FILTER]
+  mode: FALLBACK_RECENT_ONLY
+  active_af_concepts: none
+  total_entries_in_history: 4
+  kept_entries_count: 2
+  raw_history_chars: 3000
+  output_chars: 1491
+------------------------------------------------------------
+[2026-08-26 10:12:15] [HISTORY_FILTER]
+  mode: FALLBACK_RECENT_ONLY
+  active_af_concepts: none
+  total_entries_in_history: 4
+  kept_entries_count: 2
+  raw_history_chars: 3000
+  output_chars: 1491
+------------------------------------------------------------
+[2026-08-26 10:12:21] [HISTORY_FILTER]
+  mode: FALLBACK_RECENT_ONLY
+  active_af_concepts: none
+  total_entries_in_history: 5
+  kept_entries_count: 2
+  raw_history_chars: 3000
+  output_chars: 1527
+------------------------------------------------------------
+[2026-08-26 10:12:28] [HISTORY_FILTER]
+  mode: FALLBACK_RECENT_ONLY
+  active_af_concepts: none
+  total_entries_in_history: 5
+  kept_entries_count: 2
+  raw_history_chars: 3000
+  output_chars: 1527
+------------------------------------------------------------
+[2026-08-26 10:12:34] [HISTORY_FILTER]
+  mode: FALLBACK_RECENT_ONLY
+  active_af_concepts: none
+  total_entries_in_history: 5
+  kept_entries_count: 2
+  raw_history_chars: 3000
+  output_chars: 1462
+------------------------------------------------------------
+[2026-08-26 10:12:41] [HISTORY_FILTER]
+  mode: FALLBACK_RECENT_ONLY
+  active_af_concepts: none
+  total_entries_in_history: 5
+  kept_entries_count: 2
+  raw_history_chars: 3000
+  output_chars: 1294
+------------------------------------------------------------
+[2026-08-26 10:12:47] [HISTORY_FILTER]
+  mode: FALLBACK_RECENT_ONLY
+  active_af_concepts: none
+  total_entries_in_history: 5
+  kept_entries_count: 2
+  raw_history_chars: 3000
+  output_chars: 1207
+------------------------------------------------------------
+[2026-08-26 10:12:59] [HISTORY_FILTER]
+  mode: FALLBACK_RECENT_ONLY
+  active_af_concepts: none
+  total_entries_in_history: 5
+  kept_entries_count: 2
+  raw_history_chars: 3000
+  output_chars: 1219
+------------------------------------------------------------
+[2026-08-26 10:13:06] [SENSORY_STIMULATION]
+  user_message: Abel_Tesfa: what else did we talk about except the part about roman culture and politics shit
+  extracted_tokens: ['abel_tesfa', 'what', 'else', 'talk', 'about', 'except', 'part', 'about', 'roman', 'culture']
+  af_state_after: (((Concept abel_tesfa) 500.0) ((Concept what) 500.0) ((Concept else) 500.0) ((Concept talk) 500.0) ((Concept except) 500.0) ((Concept part) 500.0) ((Concept about) 1000.0) ((Concept roman) 500.0) ((Concept culture) 500.0))
+------------------------------------------------------------
+[2026-08-26 10:13:06] [ATTENTION_DECAY]
+  af_before_decay: (((Concept abel_tesfa) 500.0) ((Concept what) 500.0) ((Concept else) 500.0) ((Concept talk) 500.0) ((Concept except) 500.0) ((Concept part) 500.0) ((Concept about) 1000.0) ((Concept roman) 500.0) ((Concept culture) 500.0))
+  af_after_decay: (((Concept abel_tesfa) 350.0) ((Concept what) 350.0) ((Concept else) 350.0) ((Concept talk) 350.0) ((Concept except) 350.0) ((Concept part) 350.0) ((Concept about) 700.0) ((Concept roman) 350.0) ((Concept culture) 350.0))
+------------------------------------------------------------
+[2026-08-26 10:13:06] [HISTORY_FILTER]
+  mode: AF_ATTENTION_FILTERED
+  active_af_concepts: ['roman', 'talk', 'except', 'else', 'culture', 'abel_tesfa', 'part', 'what', 'about']
+  total_entries_in_history: 5
+  af_matched_entries_count: 5
+  total_entries_in_prompt: 5
+  raw_history_chars: 3000
+  output_chars: 2999
+------------------------------------------------------------
+[2026-08-26 10:13:12] [ATTENTION_DECAY]
+  af_before_decay: (((Concept abel_tesfa) 350.0) ((Concept what) 350.0) ((Concept else) 350.0) ((Concept talk) 350.0) ((Concept except) 350.0) ((Concept part) 350.0) ((Concept about) 700.0) ((Concept roman) 350.0) ((Concept culture) 350.0))
+  af_after_decay: (((Concept abel_tesfa) 244.99999999999997) ((Concept what) 244.99999999999997) ((Concept else) 244.99999999999997) ((Concept talk) 244.99999999999997) ((Concept except) 244.99999999999997) ((Concept part) 244.99999999999997) ((Concept about) 489.99999999999994) ((Concept roman) 244.99999999999997) ((Concept culture) 244.99999999999997))
+------------------------------------------------------------
+[2026-08-26 10:13:12] [HISTORY_FILTER]
+  mode: AF_ATTENTION_FILTERED
+  active_af_concepts: ['roman', 'talk', 'except', 'else', 'culture', 'abel_tesfa', 'part', 'what', 'about']
+  total_entries_in_history: 5
+  af_matched_entries_count: 5
+  total_entries_in_prompt: 5
+  raw_history_chars: 3000
+  output_chars: 2999
+------------------------------------------------------------
+[2026-08-26 10:13:19] [ATTENTION_DECAY]
+  af_before_decay: (((Concept abel_tesfa) 244.99999999999997) ((Concept what) 244.99999999999997) ((Concept else) 244.99999999999997) ((Concept talk) 244.99999999999997) ((Concept except) 244.99999999999997) ((Concept part) 244.99999999999997) ((Concept about) 489.99999999999994) ((Concept roman) 244.99999999999997) ((Concept culture) 244.99999999999997))
+  af_after_decay: (((Concept abel_tesfa) 171.49999999999997) ((Concept what) 171.49999999999997) ((Concept else) 171.49999999999997) ((Concept talk) 171.49999999999997) ((Concept except) 171.49999999999997) ((Concept part) 171.49999999999997) ((Concept about) 342.99999999999994) ((Concept roman) 171.49999999999997) ((Concept culture) 171.49999999999997))
+------------------------------------------------------------
+[2026-08-26 10:13:19] [HISTORY_FILTER]
+  mode: AF_ATTENTION_FILTERED
+  active_af_concepts: ['roman', 'talk', 'except', 'else', 'culture', 'abel_tesfa', 'part', 'what', 'about']
+  total_entries_in_history: 5
+  af_matched_entries_count: 5
+  total_entries_in_prompt: 5
+  raw_history_chars: 3000
+  output_chars: 2999
+------------------------------------------------------------
+[2026-08-26 10:13:26] [ATTENTION_DECAY]
+  af_before_decay: (((Concept abel_tesfa) 171.49999999999997) ((Concept what) 171.49999999999997) ((Concept else) 171.49999999999997) ((Concept talk) 171.49999999999997) ((Concept except) 171.49999999999997) ((Concept part) 171.49999999999997) ((Concept about) 342.99999999999994) ((Concept roman) 171.49999999999997) ((Concept culture) 171.49999999999997))
+  af_after_decay: (((Concept abel_tesfa) 120.04999999999997) ((Concept what) 120.04999999999997) ((Concept else) 120.04999999999997) ((Concept talk) 120.04999999999997) ((Concept except) 120.04999999999997) ((Concept part) 120.04999999999997) ((Concept about) 240.09999999999994) ((Concept roman) 120.04999999999997) ((Concept culture) 120.04999999999997))
+------------------------------------------------------------
+[2026-08-26 10:13:26] [HISTORY_FILTER]
+  mode: AF_ATTENTION_FILTERED
+  active_af_concepts: ['roman', 'talk', 'except', 'else', 'culture', 'abel_tesfa', 'part', 'what', 'about']
+  total_entries_in_history: 5
+  af_matched_entries_count: 5
+  total_entries_in_prompt: 5
+  raw_history_chars: 3000
+  output_chars: 2999
+------------------------------------------------------------
+[2026-08-26 10:13:32] [ATTENTION_DECAY]
+  af_before_decay: (((Concept abel_tesfa) 120.04999999999997) ((Concept what) 120.04999999999997) ((Concept else) 120.04999999999997) ((Concept talk) 120.04999999999997) ((Concept except) 120.04999999999997) ((Concept part) 120.04999999999997) ((Concept about) 240.09999999999994) ((Concept roman) 120.04999999999997) ((Concept culture) 120.04999999999997))
+  af_after_decay: (((Concept abel_tesfa) 84.03499999999997) ((Concept what) 84.03499999999997) ((Concept else) 84.03499999999997) ((Concept talk) 84.03499999999997) ((Concept except) 84.03499999999997) ((Concept part) 84.03499999999997) ((Concept about) 168.06999999999994) ((Concept roman) 84.03499999999997) ((Concept culture) 84.03499999999997))
+------------------------------------------------------------
+[2026-08-26 10:13:32] [HISTORY_FILTER]
+  mode: AF_ATTENTION_FILTERED
+  active_af_concepts: ['roman', 'talk', 'except', 'else', 'culture', 'abel_tesfa', 'part', 'what', 'about']
+  total_entries_in_history: 5
+  af_matched_entries_count: 5
+  total_entries_in_prompt: 5
+  raw_history_chars: 3000
+  output_chars: 2999
+------------------------------------------------------------
+[2026-08-26 10:13:40] [ATTENTION_DECAY]
+  af_before_decay: (((Concept abel_tesfa) 84.03499999999997) ((Concept what) 84.03499999999997) ((Concept else) 84.03499999999997) ((Concept talk) 84.03499999999997) ((Concept except) 84.03499999999997) ((Concept part) 84.03499999999997) ((Concept about) 168.06999999999994) ((Concept roman) 84.03499999999997) ((Concept culture) 84.03499999999997))
+  af_after_decay: (((Concept abel_tesfa) 58.82449999999997) ((Concept what) 58.82449999999997) ((Concept else) 58.82449999999997) ((Concept talk) 58.82449999999997) ((Concept except) 58.82449999999997) ((Concept part) 58.82449999999997) ((Concept about) 117.64899999999994) ((Concept roman) 58.82449999999997) ((Concept culture) 58.82449999999997))
+------------------------------------------------------------
+[2026-08-26 10:13:40] [HISTORY_FILTER]
+  mode: AF_ATTENTION_FILTERED
+  active_af_concepts: ['roman', 'talk', 'except', 'else', 'culture', 'abel_tesfa', 'part', 'what', 'about']
+  total_entries_in_history: 5
+  af_matched_entries_count: 5
+  total_entries_in_prompt: 5
+  raw_history_chars: 3000
+  output_chars: 2998
+------------------------------------------------------------
+[2026-08-26 10:13:51] [ATTENTION_DECAY]
+  af_before_decay: (((Concept abel_tesfa) 58.82449999999997) ((Concept what) 58.82449999999997) ((Concept else) 58.82449999999997) ((Concept talk) 58.82449999999997) ((Concept except) 58.82449999999997) ((Concept part) 58.82449999999997) ((Concept about) 117.64899999999994) ((Concept roman) 58.82449999999997) ((Concept culture) 58.82449999999997))
+  af_after_decay: (((Concept abel_tesfa) 41.177149999999976) ((Concept what) 41.177149999999976) ((Concept else) 41.177149999999976) ((Concept talk) 41.177149999999976) ((Concept except) 41.177149999999976) ((Concept part) 41.177149999999976) ((Concept about) 82.35429999999995) ((Concept roman) 41.177149999999976) ((Concept culture) 41.177149999999976))
+------------------------------------------------------------
+[2026-08-26 10:13:51] [HISTORY_FILTER]
+  mode: AF_ATTENTION_FILTERED
+  active_af_concepts: ['roman', 'talk', 'except', 'else', 'culture', 'abel_tesfa', 'part', 'what', 'about']
+  total_entries_in_history: 5
+  af_matched_entries_count: 5
+  total_entries_in_prompt: 5
+  raw_history_chars: 3000
+  output_chars: 2999
+------------------------------------------------------------
+[2026-08-26 10:13:59] [ATTENTION_DECAY]
+  af_before_decay: (((Concept abel_tesfa) 41.177149999999976) ((Concept what) 41.177149999999976) ((Concept else) 41.177149999999976) ((Concept talk) 41.177149999999976) ((Concept except) 41.177149999999976) ((Concept part) 41.177149999999976) ((Concept about) 82.35429999999995) ((Concept roman) 41.177149999999976) ((Concept culture) 41.177149999999976))
+  af_after_decay: (((Concept abel_tesfa) 28.824004999999982) ((Concept what) 28.824004999999982) ((Concept else) 28.824004999999982) ((Concept talk) 28.824004999999982) ((Concept except) 28.824004999999982) ((Concept part) 28.824004999999982) ((Concept about) 57.648009999999964) ((Concept roman) 28.824004999999982) ((Concept culture) 28.824004999999982))
+------------------------------------------------------------
+[2026-08-26 10:13:59] [HISTORY_FILTER]
+  mode: AF_ATTENTION_FILTERED
+  active_af_concepts: ['roman', 'talk', 'except', 'else', 'culture', 'abel_tesfa', 'part', 'what', 'about']
+  total_entries_in_history: 5
+  af_matched_entries_count: 5
+  total_entries_in_prompt: 5
+  raw_history_chars: 3000
+  output_chars: 2998
+------------------------------------------------------------
+[2026-08-26 10:14:08] [ATTENTION_DECAY]
+  af_before_decay: (((Concept abel_tesfa) 28.824004999999982) ((Concept what) 28.824004999999982) ((Concept else) 28.824004999999982) ((Concept talk) 28.824004999999982) ((Concept except) 28.824004999999982) ((Concept part) 28.824004999999982) ((Concept about) 57.648009999999964) ((Concept roman) 28.824004999999982) ((Concept culture) 28.824004999999982))
+  af_after_decay: (((Concept abel_tesfa) 20.176803499999988) ((Concept what) 20.176803499999988) ((Concept else) 20.176803499999988) ((Concept talk) 20.176803499999988) ((Concept except) 20.176803499999988) ((Concept part) 20.176803499999988) ((Concept about) 40.353606999999975) ((Concept roman) 20.176803499999988) ((Concept culture) 20.176803499999988))
+------------------------------------------------------------
+[2026-08-26 10:14:08] [HISTORY_FILTER]
+  mode: AF_ATTENTION_FILTERED
+  active_af_concepts: ['roman', 'talk', 'except', 'else', 'culture', 'abel_tesfa', 'part', 'what', 'about']
+  total_entries_in_history: 5
+  af_matched_entries_count: 5
+  total_entries_in_prompt: 5
+  raw_history_chars: 3000
+  output_chars: 2999
+------------------------------------------------------------
+[2026-08-26 10:14:16] [ATTENTION_DECAY]
+  af_before_decay: (((Concept abel_tesfa) 20.176803499999988) ((Concept what) 20.176803499999988) ((Concept else) 20.176803499999988) ((Concept talk) 20.176803499999988) ((Concept except) 20.176803499999988) ((Concept part) 20.176803499999988) ((Concept about) 40.353606999999975) ((Concept roman) 20.176803499999988) ((Concept culture) 20.176803499999988))
+  af_after_decay: (((Concept abel_tesfa) 14.12376244999999) ((Concept what) 14.12376244999999) ((Concept else) 14.12376244999999) ((Concept talk) 14.12376244999999) ((Concept except) 14.12376244999999) ((Concept part) 14.12376244999999) ((Concept about) 28.24752489999998) ((Concept roman) 14.12376244999999) ((Concept culture) 14.12376244999999))
+------------------------------------------------------------
+[2026-08-26 10:14:16] [HISTORY_FILTER]
+  mode: AF_ATTENTION_FILTERED
+  active_af_concepts: ['roman', 'talk', 'except', 'else', 'culture', 'abel_tesfa', 'part', 'what', 'about']
+  total_entries_in_history: 5
+  af_matched_entries_count: 5
+  total_entries_in_prompt: 5
+  raw_history_chars: 3000
+  output_chars: 2999
+------------------------------------------------------------
+[2026-08-26 10:14:23] [ATTENTION_DECAY]
+  af_before_decay: (((Concept abel_tesfa) 14.12376244999999) ((Concept what) 14.12376244999999) ((Concept else) 14.12376244999999) ((Concept talk) 14.12376244999999) ((Concept except) 14.12376244999999) ((Concept part) 14.12376244999999) ((Concept about) 28.24752489999998) ((Concept roman) 14.12376244999999) ((Concept culture) 14.12376244999999))
+  af_after_decay: (((Concept abel_tesfa) 9.886633714999993) ((Concept what) 9.886633714999993) ((Concept else) 9.886633714999993) ((Concept talk) 9.886633714999993) ((Concept except) 9.886633714999993) ((Concept part) 9.886633714999993) ((Concept about) 19.773267429999986) ((Concept roman) 9.886633714999993) ((Concept culture) 9.886633714999993))
+------------------------------------------------------------
+[2026-08-26 10:14:23] [HISTORY_FILTER]
+  mode: AF_ATTENTION_FILTERED
+  active_af_concepts: ['roman', 'talk', 'except', 'else', 'culture', 'abel_tesfa', 'part', 'what', 'about']
+  total_entries_in_history: 5
+  af_matched_entries_count: 5
+  total_entries_in_prompt: 5
+  raw_history_chars: 3000
+  output_chars: 2999
+------------------------------------------------------------
+[2026-08-26 10:14:30] [ATTENTION_DECAY]
+  af_before_decay: (((Concept abel_tesfa) 9.886633714999993) ((Concept what) 9.886633714999993) ((Concept else) 9.886633714999993) ((Concept talk) 9.886633714999993) ((Concept except) 9.886633714999993) ((Concept part) 9.886633714999993) ((Concept about) 19.773267429999986) ((Concept roman) 9.886633714999993) ((Concept culture) 9.886633714999993))
+  af_after_decay: (((Concept abel_tesfa) 6.920643600499995) ((Concept what) 6.920643600499995) ((Concept else) 6.920643600499995) ((Concept talk) 6.920643600499995) ((Concept except) 6.920643600499995) ((Concept part) 6.920643600499995) ((Concept about) 13.84128720099999) ((Concept roman) 6.920643600499995) ((Concept culture) 6.920643600499995))
+------------------------------------------------------------
+[2026-08-26 10:14:30] [HISTORY_FILTER]
+  mode: AF_ATTENTION_FILTERED
+  active_af_concepts: ['roman', 'talk', 'except', 'else', 'culture', 'abel_tesfa', 'part', 'what', 'about']
+  total_entries_in_history: 5
+  af_matched_entries_count: 5
+  total_entries_in_prompt: 5
+  raw_history_chars: 3000
+  output_chars: 2999
+------------------------------------------------------------
+[2026-08-26 10:14:39] [ATTENTION_DECAY]
+  af_before_decay: (((Concept abel_tesfa) 6.920643600499995) ((Concept what) 6.920643600499995) ((Concept else) 6.920643600499995) ((Concept talk) 6.920643600499995) ((Concept except) 6.920643600499995) ((Concept part) 6.920643600499995) ((Concept about) 13.84128720099999) ((Concept roman) 6.920643600499995) ((Concept culture) 6.920643600499995))
+  af_after_decay: (((Concept abel_tesfa) 4.844450520349996) ((Concept what) 4.844450520349996) ((Concept else) 4.844450520349996) ((Concept talk) 4.844450520349996) ((Concept except) 4.844450520349996) ((Concept part) 4.844450520349996) ((Concept about) 9.688901040699992) ((Concept roman) 4.844450520349996) ((Concept culture) 4.844450520349996))
+------------------------------------------------------------
+[2026-08-26 10:14:39] [HISTORY_FILTER]
+  mode: AF_ATTENTION_FILTERED
+  active_af_concepts: ['roman', 'talk', 'except', 'else', 'culture', 'abel_tesfa', 'part', 'what', 'about']
+  total_entries_in_history: 5
+  af_matched_entries_count: 5
+  total_entries_in_prompt: 5
+  raw_history_chars: 3000
+  output_chars: 2999
+------------------------------------------------------------
+[2026-08-26 10:14:47] [SENSORY_STIMULATION]
+  user_message: Abel_Tesfa: tell me about AGI in detail please, at least 40 words
+  extracted_tokens: ['abel_tesfa', 'tell', 'about', 'agi', 'detail', 'please', 'least', 'words']
+  af_state_after: (((Concept what) 4.844450520349996) ((Concept else) 4.844450520349996) ((Concept talk) 4.844450520349996) ((Concept except) 4.844450520349996) ((Concept part) 4.844450520349996) ((Concept roman) 4.844450520349996) ((Concept culture) 4.844450520349996) ((Concept abel_tesfa) 504.84445052035) ((Concept tell) 500.0) ((Concept about) 509.6889010407) ((Concept agi) 500.0) ((Concept detail) 500.0) ((Concept please) 500.0) ((Concept least) 500.0) ((Concept words) 500.0))
+------------------------------------------------------------
+[2026-08-26 10:14:47] [ATTENTION_DECAY]
+  af_before_decay: (((Concept what) 4.844450520349996) ((Concept else) 4.844450520349996) ((Concept talk) 4.844450520349996) ((Concept except) 4.844450520349996) ((Concept part) 4.844450520349996) ((Concept roman) 4.844450520349996) ((Concept culture) 4.844450520349996) ((Concept abel_tesfa) 504.84445052035) ((Concept tell) 500.0) ((Concept about) 509.6889010407) ((Concept agi) 500.0) ((Concept detail) 500.0) ((Concept please) 500.0) ((Concept least) 500.0) ((Concept words) 500.0))
+  af_after_decay: (((Concept what) 3.391115364244997) ((Concept else) 3.391115364244997) ((Concept talk) 3.391115364244997) ((Concept except) 3.391115364244997) ((Concept part) 3.391115364244997) ((Concept roman) 3.391115364244997) ((Concept culture) 3.391115364244997) ((Concept abel_tesfa) 353.39111536424497) ((Concept tell) 350.0) ((Concept about) 356.78223072849) ((Concept agi) 350.0) ((Concept detail) 350.0) ((Concept please) 350.0) ((Concept least) 350.0) ((Concept words) 350.0))
+------------------------------------------------------------
+[2026-08-26 10:14:47] [HISTORY_FILTER]
+  mode: AF_ATTENTION_FILTERED
+  active_af_concepts: ['roman', 'tell', 'talk', 'except', 'agi', 'else', 'detail', 'least', 'part', 'abel_tesfa', 'please', 'what', 'culture', 'about', 'words']
+  total_entries_in_history: 5
+  af_matched_entries_count: 5
+  total_entries_in_prompt: 5
+  raw_history_chars: 3000
+  output_chars: 2999
+------------------------------------------------------------
+[2026-08-26 10:14:58] [ATTENTION_DECAY]
+  af_before_decay: (((Concept what) 3.391115364244997) ((Concept else) 3.391115364244997) ((Concept talk) 3.391115364244997) ((Concept except) 3.391115364244997) ((Concept part) 3.391115364244997) ((Concept roman) 3.391115364244997) ((Concept culture) 3.391115364244997) ((Concept abel_tesfa) 353.39111536424497) ((Concept tell) 350.0) ((Concept about) 356.78223072849) ((Concept agi) 350.0) ((Concept detail) 350.0) ((Concept please) 350.0) ((Concept least) 350.0) ((Concept words) 350.0))
+  af_after_decay: (((Concept what) 2.3737807549714978) ((Concept else) 2.3737807549714978) ((Concept talk) 2.3737807549714978) ((Concept except) 2.3737807549714978) ((Concept part) 2.3737807549714978) ((Concept roman) 2.3737807549714978) ((Concept culture) 2.3737807549714978) ((Concept abel_tesfa) 247.37378075497145) ((Concept tell) 244.99999999999997) ((Concept about) 249.74756150994298) ((Concept agi) 244.99999999999997) ((Concept detail) 244.99999999999997) ((Concept please) 244.99999999999997) ((Concept least) 244.99999999999997) ((Concept words) 244.99999999999997))
+------------------------------------------------------------
+[2026-08-26 10:14:58] [HISTORY_FILTER]
+  mode: AF_ATTENTION_FILTERED
+  active_af_concepts: ['roman', 'tell', 'talk', 'except', 'agi', 'else', 'detail', 'least', 'part', 'abel_tesfa', 'please', 'what', 'culture', 'about', 'words']
+  total_entries_in_history: 5
+  af_matched_entries_count: 5
+  total_entries_in_prompt: 5
+  raw_history_chars: 3000
+  output_chars: 2998
+------------------------------------------------------------
+[2026-08-26 10:15:10] [ATTENTION_DECAY]
+  af_before_decay: (((Concept what) 2.3737807549714978) ((Concept else) 2.3737807549714978) ((Concept talk) 2.3737807549714978) ((Concept except) 2.3737807549714978) ((Concept part) 2.3737807549714978) ((Concept roman) 2.3737807549714978) ((Concept culture) 2.3737807549714978) ((Concept abel_tesfa) 247.37378075497145) ((Concept tell) 244.99999999999997) ((Concept about) 249.74756150994298) ((Concept agi) 244.99999999999997) ((Concept detail) 244.99999999999997) ((Concept please) 244.99999999999997) ((Concept least) 244.99999999999997) ((Concept words) 244.99999999999997))
+  af_after_decay: (((Concept what) 1.6616465284800483) ((Concept else) 1.6616465284800483) ((Concept talk) 1.6616465284800483) ((Concept except) 1.6616465284800483) ((Concept part) 1.6616465284800483) ((Concept roman) 1.6616465284800483) ((Concept culture) 1.6616465284800483) ((Concept abel_tesfa) 173.16164652848) ((Concept tell) 171.49999999999997) ((Concept about) 174.82329305696007) ((Concept agi) 171.49999999999997) ((Concept detail) 171.49999999999997) ((Concept please) 171.49999999999997) ((Concept least) 171.49999999999997) ((Concept words) 171.49999999999997))
+------------------------------------------------------------
+[2026-08-26 10:15:10] [HISTORY_FILTER]
+  mode: AF_ATTENTION_FILTERED
+  active_af_concepts: ['roman', 'tell', 'talk', 'except', 'agi', 'else', 'detail', 'least', 'part', 'abel_tesfa', 'please', 'what', 'culture', 'about', 'words']
+  total_entries_in_history: 5
+  af_matched_entries_count: 5
+  total_entries_in_prompt: 5
+  raw_history_chars: 3000
+  output_chars: 2999
+------------------------------------------------------------
+[2026-08-26 10:15:18] [ATTENTION_DECAY]
+  af_before_decay: (((Concept what) 1.6616465284800483) ((Concept else) 1.6616465284800483) ((Concept talk) 1.6616465284800483) ((Concept except) 1.6616465284800483) ((Concept part) 1.6616465284800483) ((Concept roman) 1.6616465284800483) ((Concept culture) 1.6616465284800483) ((Concept abel_tesfa) 173.16164652848) ((Concept tell) 171.49999999999997) ((Concept about) 174.82329305696007) ((Concept agi) 171.49999999999997) ((Concept detail) 171.49999999999997) ((Concept please) 171.49999999999997) ((Concept least) 171.49999999999997) ((Concept words) 171.49999999999997))
+  af_after_decay: (((Concept what) 1.1631525699360337) ((Concept else) 1.1631525699360337) ((Concept talk) 1.1631525699360337) ((Concept except) 1.1631525699360337) ((Concept part) 1.1631525699360337) ((Concept roman) 1.1631525699360337) ((Concept culture) 1.1631525699360337) ((Concept abel_tesfa) 121.21315256993599) ((Concept tell) 120.04999999999997) ((Concept about) 122.37630513987204) ((Concept agi) 120.04999999999997) ((Concept detail) 120.04999999999997) ((Concept please) 120.04999999999997) ((Concept least) 120.04999999999997) ((Concept words) 120.04999999999997))
+------------------------------------------------------------
+[2026-08-26 10:15:18] [HISTORY_FILTER]
+  mode: AF_ATTENTION_FILTERED
+  active_af_concepts: ['roman', 'tell', 'talk', 'except', 'agi', 'else', 'detail', 'least', 'part', 'abel_tesfa', 'please', 'what', 'culture', 'about', 'words']
+  total_entries_in_history: 5
+  af_matched_entries_count: 5
+  total_entries_in_prompt: 5
+  raw_history_chars: 3000
+  output_chars: 2999
+------------------------------------------------------------
+[2026-08-26 10:15:26] [SENSORY_STIMULATION]
+  user_message: Abel_Tesfa: hmm okay then do u think llms will soon reach AGI or are we cooked?
+  extracted_tokens: ['abel_tesfa', 'hmm', 'okay', 'then', 'think', 'llms', 'will', 'soon', 'reach', 'agi']
+  af_state_after: (((Concept what) 1.1631525699360337) ((Concept else) 1.1631525699360337) ((Concept talk) 1.1631525699360337) ((Concept except) 1.1631525699360337) ((Concept part) 1.1631525699360337) ((Concept roman) 1.1631525699360337) ((Concept culture) 1.1631525699360337) ((Concept tell) 120.04999999999997) ((Concept about) 122.37630513987204) ((Concept detail) 120.04999999999997) ((Concept please) 120.04999999999997) ((Concept least) 120.04999999999997) ((Concept words) 120.04999999999997) ((Concept abel_tesfa) 621.213152569936) ((Concept hmm) 500.0) ((Concept okay) 500.0) ((Concept then) 500.0) ((Concept think) 500.0) ((Concept llms) 500.0) ((Concept will) 500.0) ((Concept soon) 500.0) ((Concept reach) 500.0) ((Concept agi) 620.05))
+------------------------------------------------------------
+[2026-08-26 10:15:26] [ATTENTION_DECAY]
+  af_before_decay: (((Concept what) 1.1631525699360337) ((Concept else) 1.1631525699360337) ((Concept talk) 1.1631525699360337) ((Concept except) 1.1631525699360337) ((Concept part) 1.1631525699360337) ((Concept roman) 1.1631525699360337) ((Concept culture) 1.1631525699360337) ((Concept tell) 120.04999999999997) ((Concept about) 122.37630513987204) ((Concept detail) 120.04999999999997) ((Concept please) 120.04999999999997) ((Concept least) 120.04999999999997) ((Concept words) 120.04999999999997) ((Concept abel_tesfa) 621.213152569936) ((Concept hmm) 500.0) ((Concept okay) 500.0) ((Concept then) 500.0) ((Concept think) 500.0) ((Concept llms) 500.0) ((Concept will) 500.0) ((Concept soon) 500.0) ((Concept reach) 500.0) ((Concept agi) 620.05))
+  af_after_decay: (((Concept tell) 84.03499999999997) ((Concept about) 85.66341359791042) ((Concept detail) 84.03499999999997) ((Concept please) 84.03499999999997) ((Concept least) 84.03499999999997) ((Concept words) 84.03499999999997) ((Concept abel_tesfa) 434.8492067989552) ((Concept hmm) 350.0) ((Concept okay) 350.0) ((Concept then) 350.0) ((Concept think) 350.0) ((Concept llms) 350.0) ((Concept will) 350.0) ((Concept soon) 350.0) ((Concept reach) 350.0) ((Concept agi) 434.03499999999997))
+------------------------------------------------------------
+[2026-08-26 10:15:26] [HISTORY_FILTER]
+  mode: AF_ATTENTION_FILTERED
+  active_af_concepts: ['then', 'tell', 'reach', 'agi', 'will', 'detail', 'least', 'think', 'abel_tesfa', 'okay', 'please', 'hmm', 'llms', 'soon', 'about', 'words']
+  total_entries_in_history: 5
+  af_matched_entries_count: 5
+  total_entries_in_prompt: 5
+  raw_history_chars: 3000
+  output_chars: 2999
+------------------------------------------------------------
+[2026-08-26 10:15:40] [ATTENTION_DECAY]
+  af_before_decay: (((Concept tell) 84.03499999999997) ((Concept about) 85.66341359791042) ((Concept detail) 84.03499999999997) ((Concept please) 84.03499999999997) ((Concept least) 84.03499999999997) ((Concept words) 84.03499999999997) ((Concept abel_tesfa) 434.8492067989552) ((Concept hmm) 350.0) ((Concept okay) 350.0) ((Concept then) 350.0) ((Concept think) 350.0) ((Concept llms) 350.0) ((Concept will) 350.0) ((Concept soon) 350.0) ((Concept reach) 350.0) ((Concept agi) 434.03499999999997))
+  af_after_decay: (((Concept tell) 58.82449999999997) ((Concept about) 59.96438951853729) ((Concept detail) 58.82449999999997) ((Concept please) 58.82449999999997) ((Concept least) 58.82449999999997) ((Concept words) 58.82449999999997) ((Concept abel_tesfa) 304.39444475926865) ((Concept hmm) 244.99999999999997) ((Concept okay) 244.99999999999997) ((Concept then) 244.99999999999997) ((Concept think) 244.99999999999997) ((Concept llms) 244.99999999999997) ((Concept will) 244.99999999999997) ((Concept soon) 244.99999999999997) ((Concept reach) 244.99999999999997) ((Concept agi) 303.82449999999994))
+------------------------------------------------------------
+[2026-08-26 10:15:40] [HISTORY_FILTER]
+  mode: AF_ATTENTION_FILTERED
+  active_af_concepts: ['then', 'tell', 'reach', 'agi', 'will', 'detail', 'least', 'think', 'abel_tesfa', 'okay', 'please', 'hmm', 'llms', 'soon', 'about', 'words']
+  total_entries_in_history: 5
+  af_matched_entries_count: 5
+  total_entries_in_prompt: 5
+  raw_history_chars: 3000
+  output_chars: 2998
+------------------------------------------------------------
+[2026-08-26 10:15:48] [ATTENTION_DECAY]
+  af_before_decay: (((Concept tell) 58.82449999999997) ((Concept about) 59.96438951853729) ((Concept detail) 58.82449999999997) ((Concept please) 58.82449999999997) ((Concept least) 58.82449999999997) ((Concept words) 58.82449999999997) ((Concept abel_tesfa) 304.39444475926865) ((Concept hmm) 244.99999999999997) ((Concept okay) 244.99999999999997) ((Concept then) 244.99999999999997) ((Concept think) 244.99999999999997) ((Concept llms) 244.99999999999997) ((Concept will) 244.99999999999997) ((Concept soon) 244.99999999999997) ((Concept reach) 244.99999999999997) ((Concept agi) 303.82449999999994))
+  af_after_decay: (((Concept tell) 41.177149999999976) ((Concept about) 41.975072662976096) ((Concept detail) 41.177149999999976) ((Concept please) 41.177149999999976) ((Concept least) 41.177149999999976) ((Concept words) 41.177149999999976) ((Concept abel_tesfa) 213.07611133148805) ((Concept hmm) 171.49999999999997) ((Concept okay) 171.49999999999997) ((Concept then) 171.49999999999997) ((Concept think) 171.49999999999997) ((Concept llms) 171.49999999999997) ((Concept will) 171.49999999999997) ((Concept soon) 171.49999999999997) ((Concept reach) 171.49999999999997) ((Concept agi) 212.67714999999995))
+------------------------------------------------------------
+[2026-08-26 10:15:48] [HISTORY_FILTER]
+  mode: AF_ATTENTION_FILTERED
+  active_af_concepts: ['then', 'tell', 'reach', 'agi', 'will', 'detail', 'least', 'think', 'abel_tesfa', 'okay', 'please', 'hmm', 'llms', 'soon', 'about', 'words']
+  total_entries_in_history: 5
+  af_matched_entries_count: 5
+  total_entries_in_prompt: 5
+  raw_history_chars: 3000
+  output_chars: 2999
+------------------------------------------------------------
+[2026-08-26 10:16:03] [ATTENTION_DECAY]
+  af_before_decay: (((Concept tell) 41.177149999999976) ((Concept about) 41.975072662976096) ((Concept detail) 41.177149999999976) ((Concept please) 41.177149999999976) ((Concept least) 41.177149999999976) ((Concept words) 41.177149999999976) ((Concept abel_tesfa) 213.07611133148805) ((Concept hmm) 171.49999999999997) ((Concept okay) 171.49999999999997) ((Concept then) 171.49999999999997) ((Concept think) 171.49999999999997) ((Concept llms) 171.49999999999997) ((Concept will) 171.49999999999997) ((Concept soon) 171.49999999999997) ((Concept reach) 171.49999999999997) ((Concept agi) 212.67714999999995))
+  af_after_decay: (((Concept tell) 28.824004999999982) ((Concept about) 29.382550864083264) ((Concept detail) 28.824004999999982) ((Concept please) 28.824004999999982) ((Concept least) 28.824004999999982) ((Concept words) 28.824004999999982) ((Concept abel_tesfa) 149.15327793204162) ((Concept hmm) 120.04999999999997) ((Concept okay) 120.04999999999997) ((Concept then) 120.04999999999997) ((Concept think) 120.04999999999997) ((Concept llms) 120.04999999999997) ((Concept will) 120.04999999999997) ((Concept soon) 120.04999999999997) ((Concept reach) 120.04999999999997) ((Concept agi) 148.87400499999995))
+------------------------------------------------------------
+[2026-08-26 10:16:03] [HISTORY_FILTER]
+  mode: AF_ATTENTION_FILTERED
+  active_af_concepts: ['then', 'tell', 'reach', 'agi', 'will', 'detail', 'least', 'think', 'abel_tesfa', 'okay', 'please', 'hmm', 'llms', 'soon', 'about', 'words']
+  total_entries_in_history: 5
+  af_matched_entries_count: 5
+  total_entries_in_prompt: 5
+  raw_history_chars: 3000
+  output_chars: 2999
+------------------------------------------------------------
+[2026-08-26 10:16:10] [ATTENTION_DECAY]
+  af_before_decay: (((Concept tell) 28.824004999999982) ((Concept about) 29.382550864083264) ((Concept detail) 28.824004999999982) ((Concept please) 28.824004999999982) ((Concept least) 28.824004999999982) ((Concept words) 28.824004999999982) ((Concept abel_tesfa) 149.15327793204162) ((Concept hmm) 120.04999999999997) ((Concept okay) 120.04999999999997) ((Concept then) 120.04999999999997) ((Concept think) 120.04999999999997) ((Concept llms) 120.04999999999997) ((Concept will) 120.04999999999997) ((Concept soon) 120.04999999999997) ((Concept reach) 120.04999999999997) ((Concept agi) 148.87400499999995))
+  af_after_decay: (((Concept tell) 20.176803499999988) ((Concept about) 20.567785604858283) ((Concept detail) 20.176803499999988) ((Concept please) 20.176803499999988) ((Concept least) 20.176803499999988) ((Concept words) 20.176803499999988) ((Concept abel_tesfa) 104.40729455242912) ((Concept hmm) 84.03499999999997) ((Concept okay) 84.03499999999997) ((Concept then) 84.03499999999997) ((Concept think) 84.03499999999997) ((Concept llms) 84.03499999999997) ((Concept will) 84.03499999999997) ((Concept soon) 84.03499999999997) ((Concept reach) 84.03499999999997) ((Concept agi) 104.21180349999996))
+------------------------------------------------------------
+[2026-08-26 10:16:10] [HISTORY_FILTER]
+  mode: AF_ATTENTION_FILTERED
+  active_af_concepts: ['then', 'tell', 'reach', 'agi', 'will', 'detail', 'least', 'think', 'abel_tesfa', 'okay', 'please', 'hmm', 'llms', 'soon', 'about', 'words']
+  total_entries_in_history: 5
+  af_matched_entries_count: 5
+  total_entries_in_prompt: 5
+  raw_history_chars: 3000
+  output_chars: 2999
+------------------------------------------------------------
+[2026-08-26 10:16:24] [SENSORY_STIMULATION]
+  user_message: Abel_Tesfa: what is the point of AGI tho if it is gonna take human jobs why do we make it, I mean making it is really hurting us no or are we good?
+  extracted_tokens: ['abel_tesfa', 'what', 'point', 'agi', 'tho', 'gonna', 'take', 'human', 'jobs', 'why']
+  af_state_after: (((Concept tell) 20.176803499999988) ((Concept about) 20.567785604858283) ((Concept detail) 20.176803499999988) ((Concept please) 20.176803499999988) ((Concept least) 20.176803499999988) ((Concept words) 20.176803499999988) ((Concept hmm) 84.03499999999997) ((Concept okay) 84.03499999999997) ((Concept then) 84.03499999999997) ((Concept think) 84.03499999999997) ((Concept llms) 84.03499999999997) ((Concept will) 84.03499999999997) ((Concept soon) 84.03499999999997) ((Concept reach) 84.03499999999997) ((Concept abel_tesfa) 604.4072945524291) ((Concept what) 500.0) ((Concept point) 500.0) ((Concept agi) 604.2118035) ((Concept tho) 500.0) ((Concept gonna) 500.0) ((Concept take) 500.0) ((Concept human) 500.0) ((Concept jobs) 500.0) ((Concept why) 500.0))
+------------------------------------------------------------
+[2026-08-26 10:16:24] [ATTENTION_DECAY]
+  af_before_decay: (((Concept tell) 20.176803499999988) ((Concept about) 20.567785604858283) ((Concept detail) 20.176803499999988) ((Concept please) 20.176803499999988) ((Concept least) 20.176803499999988) ((Concept words) 20.176803499999988) ((Concept hmm) 84.03499999999997) ((Concept okay) 84.03499999999997) ((Concept then) 84.03499999999997) ((Concept think) 84.03499999999997) ((Concept llms) 84.03499999999997) ((Concept will) 84.03499999999997) ((Concept soon) 84.03499999999997) ((Concept reach) 84.03499999999997) ((Concept abel_tesfa) 604.4072945524291) ((Concept what) 500.0) ((Concept point) 500.0) ((Concept agi) 604.2118035) ((Concept tho) 500.0) ((Concept gonna) 500.0) ((Concept take) 500.0) ((Concept human) 500.0) ((Concept jobs) 500.0) ((Concept why) 500.0))
+  af_after_decay: (((Concept tell) 14.12376244999999) ((Concept about) 14.397449923400798) ((Concept detail) 14.12376244999999) ((Concept please) 14.12376244999999) ((Concept least) 14.12376244999999) ((Concept words) 14.12376244999999) ((Concept hmm) 58.82449999999997) ((Concept okay) 58.82449999999997) ((Concept then) 58.82449999999997) ((Concept think) 58.82449999999997) ((Concept llms) 58.82449999999997) ((Concept will) 58.82449999999997) ((Concept soon) 58.82449999999997) ((Concept reach) 58.82449999999997) ((Concept abel_tesfa) 423.08510618670033) ((Concept what) 350.0) ((Concept point) 350.0) ((Concept agi) 422.94826244999996) ((Concept tho) 350.0) ((Concept gonna) 350.0) ((Concept take) 350.0) ((Concept human) 350.0) ((Concept jobs) 350.0) ((Concept why) 350.0))
+------------------------------------------------------------
+[2026-08-26 10:16:24] [HISTORY_FILTER]
+  mode: AF_ATTENTION_FILTERED
+  active_af_concepts: ['why', 'tell', 'will', 'detail', 'soon', 'take', 'about', 'words', 'tho', 'agi', 'least', 'point', 'okay', 'hmm', 'what', 'reach', 'human', 'gonna', 'think', 'llms', 'abel_tesfa', 'then', 'jobs', 'please']
+  total_entries_in_history: 5
+  af_matched_entries_count: 5
+  total_entries_in_prompt: 5
+  raw_history_chars: 3000
+  output_chars: 2999
+------------------------------------------------------------
+[2026-08-26 10:16:32] [ATTENTION_DECAY]
+  af_before_decay: (((Concept tell) 14.12376244999999) ((Concept about) 14.397449923400798) ((Concept detail) 14.12376244999999) ((Concept please) 14.12376244999999) ((Concept least) 14.12376244999999) ((Concept words) 14.12376244999999) ((Concept hmm) 58.82449999999997) ((Concept okay) 58.82449999999997) ((Concept then) 58.82449999999997) ((Concept think) 58.82449999999997) ((Concept llms) 58.82449999999997) ((Concept will) 58.82449999999997) ((Concept soon) 58.82449999999997) ((Concept reach) 58.82449999999997) ((Concept abel_tesfa) 423.08510618670033) ((Concept what) 350.0) ((Concept point) 350.0) ((Concept agi) 422.94826244999996) ((Concept tho) 350.0) ((Concept gonna) 350.0) ((Concept take) 350.0) ((Concept human) 350.0) ((Concept jobs) 350.0) ((Concept why) 350.0))
+  af_after_decay: (((Concept tell) 9.886633714999993) ((Concept about) 10.078214946380557) ((Concept detail) 9.886633714999993) ((Concept please) 9.886633714999993) ((Concept least) 9.886633714999993) ((Concept words) 9.886633714999993) ((Concept hmm) 41.177149999999976) ((Concept okay) 41.177149999999976) ((Concept then) 41.177149999999976) ((Concept think) 41.177149999999976) ((Concept llms) 41.177149999999976) ((Concept will) 41.177149999999976) ((Concept soon) 41.177149999999976) ((Concept reach) 41.177149999999976) ((Concept abel_tesfa) 296.1595743306902) ((Concept what) 244.99999999999997) ((Concept point) 244.99999999999997) ((Concept agi) 296.06378371499994) ((Concept tho) 244.99999999999997) ((Concept gonna) 244.99999999999997) ((Concept take) 244.99999999999997) ((Concept human) 244.99999999999997) ((Concept jobs) 244.99999999999997) ((Concept why) 244.99999999999997))
+------------------------------------------------------------
+[2026-08-26 10:16:32] [HISTORY_FILTER]
+  mode: AF_ATTENTION_FILTERED
+  active_af_concepts: ['why', 'tell', 'will', 'detail', 'soon', 'take', 'about', 'words', 'tho', 'agi', 'least', 'point', 'okay', 'hmm', 'what', 'reach', 'human', 'gonna', 'think', 'llms', 'abel_tesfa', 'then', 'jobs', 'please']
+  total_entries_in_history: 5
+  af_matched_entries_count: 5
+  total_entries_in_prompt: 5
+  raw_history_chars: 3000
+  output_chars: 2999
+------------------------------------------------------------
+[2026-08-26 10:16:41] [ATTENTION_DECAY]
+  af_before_decay: (((Concept tell) 9.886633714999993) ((Concept about) 10.078214946380557) ((Concept detail) 9.886633714999993) ((Concept please) 9.886633714999993) ((Concept least) 9.886633714999993) ((Concept words) 9.886633714999993) ((Concept hmm) 41.177149999999976) ((Concept okay) 41.177149999999976) ((Concept then) 41.177149999999976) ((Concept think) 41.177149999999976) ((Concept llms) 41.177149999999976) ((Concept will) 41.177149999999976) ((Concept soon) 41.177149999999976) ((Concept reach) 41.177149999999976) ((Concept abel_tesfa) 296.1595743306902) ((Concept what) 244.99999999999997) ((Concept point) 244.99999999999997) ((Concept agi) 296.06378371499994) ((Concept tho) 244.99999999999997) ((Concept gonna) 244.99999999999997) ((Concept take) 244.99999999999997) ((Concept human) 244.99999999999997) ((Concept jobs) 244.99999999999997) ((Concept why) 244.99999999999997))
+  af_after_decay: (((Concept tell) 6.920643600499995) ((Concept about) 7.054750462466389) ((Concept detail) 6.920643600499995) ((Concept please) 6.920643600499995) ((Concept least) 6.920643600499995) ((Concept words) 6.920643600499995) ((Concept hmm) 28.824004999999982) ((Concept okay) 28.824004999999982) ((Concept then) 28.824004999999982) ((Concept think) 28.824004999999982) ((Concept llms) 28.824004999999982) ((Concept will) 28.824004999999982) ((Concept soon) 28.824004999999982) ((Concept reach) 28.824004999999982) ((Concept abel_tesfa) 207.31170203148312) ((Concept what) 171.49999999999997) ((Concept point) 171.49999999999997) ((Concept agi) 207.24464860049994) ((Concept tho) 171.49999999999997) ((Concept gonna) 171.49999999999997) ((Concept take) 171.49999999999997) ((Concept human) 171.49999999999997) ((Concept jobs) 171.49999999999997) ((Concept why) 171.49999999999997))
+------------------------------------------------------------
+[2026-08-26 10:16:41] [HISTORY_FILTER]
+  mode: AF_ATTENTION_FILTERED
+  active_af_concepts: ['why', 'tell', 'will', 'detail', 'soon', 'take', 'about', 'words', 'tho', 'agi', 'least', 'point', 'okay', 'hmm', 'what', 'reach', 'human', 'gonna', 'think', 'llms', 'abel_tesfa', 'then', 'jobs', 'please']
+  total_entries_in_history: 5
+  af_matched_entries_count: 5
+  total_entries_in_prompt: 5
+  raw_history_chars: 3000
+  output_chars: 2999
+------------------------------------------------------------
+[2026-08-26 10:16:48] [ATTENTION_DECAY]
+  af_before_decay: (((Concept tell) 6.920643600499995) ((Concept about) 7.054750462466389) ((Concept detail) 6.920643600499995) ((Concept please) 6.920643600499995) ((Concept least) 6.920643600499995) ((Concept words) 6.920643600499995) ((Concept hmm) 28.824004999999982) ((Concept okay) 28.824004999999982) ((Concept then) 28.824004999999982) ((Concept think) 28.824004999999982) ((Concept llms) 28.824004999999982) ((Concept will) 28.824004999999982) ((Concept soon) 28.824004999999982) ((Concept reach) 28.824004999999982) ((Concept abel_tesfa) 207.31170203148312) ((Concept what) 171.49999999999997) ((Concept point) 171.49999999999997) ((Concept agi) 207.24464860049994) ((Concept tho) 171.49999999999997) ((Concept gonna) 171.49999999999997) ((Concept take) 171.49999999999997) ((Concept human) 171.49999999999997) ((Concept jobs) 171.49999999999997) ((Concept why) 171.49999999999997))
+  af_after_decay: (((Concept tell) 4.844450520349996) ((Concept about) 4.938325323726472) ((Concept detail) 4.844450520349996) ((Concept please) 4.844450520349996) ((Concept least) 4.844450520349996) ((Concept words) 4.844450520349996) ((Concept hmm) 20.176803499999988) ((Concept okay) 20.176803499999988) ((Concept then) 20.176803499999988) ((Concept think) 20.176803499999988) ((Concept llms) 20.176803499999988) ((Concept will) 20.176803499999988) ((Concept soon) 20.176803499999988) ((Concept reach) 20.176803499999988) ((Concept abel_tesfa) 145.11819142203817) ((Concept what) 120.04999999999997) ((Concept point) 120.04999999999997) ((Concept agi) 145.07125402034995) ((Concept tho) 120.04999999999997) ((Concept gonna) 120.04999999999997) ((Concept take) 120.04999999999997) ((Concept human) 120.04999999999997) ((Concept jobs) 120.04999999999997) ((Concept why) 120.04999999999997))
+------------------------------------------------------------
+[2026-08-26 10:16:48] [HISTORY_FILTER]
+  mode: AF_ATTENTION_FILTERED
+  active_af_concepts: ['why', 'tell', 'will', 'detail', 'soon', 'take', 'about', 'words', 'tho', 'agi', 'least', 'point', 'okay', 'hmm', 'what', 'reach', 'human', 'gonna', 'think', 'llms', 'abel_tesfa', 'then', 'jobs', 'please']
+  total_entries_in_history: 5
+  af_matched_entries_count: 5
+  total_entries_in_prompt: 5
+  raw_history_chars: 3000
+  output_chars: 2998
+------------------------------------------------------------
+[2026-08-26 10:17:04] [ATTENTION_DECAY]
+  af_before_decay: (((Concept tell) 4.844450520349996) ((Concept about) 4.938325323726472) ((Concept detail) 4.844450520349996) ((Concept please) 4.844450520349996) ((Concept least) 4.844450520349996) ((Concept words) 4.844450520349996) ((Concept hmm) 20.176803499999988) ((Concept okay) 20.176803499999988) ((Concept then) 20.176803499999988) ((Concept think) 20.176803499999988) ((Concept llms) 20.176803499999988) ((Concept will) 20.176803499999988) ((Concept soon) 20.176803499999988) ((Concept reach) 20.176803499999988) ((Concept abel_tesfa) 145.11819142203817) ((Concept what) 120.04999999999997) ((Concept point) 120.04999999999997) ((Concept agi) 145.07125402034995) ((Concept tho) 120.04999999999997) ((Concept gonna) 120.04999999999997) ((Concept take) 120.04999999999997) ((Concept human) 120.04999999999997) ((Concept jobs) 120.04999999999997) ((Concept why) 120.04999999999997))
+  af_after_decay: (((Concept tell) 3.391115364244997) ((Concept about) 3.4568277266085303) ((Concept detail) 3.391115364244997) ((Concept please) 3.391115364244997) ((Concept least) 3.391115364244997) ((Concept words) 3.391115364244997) ((Concept hmm) 14.12376244999999) ((Concept okay) 14.12376244999999) ((Concept then) 14.12376244999999) ((Concept think) 14.12376244999999) ((Concept llms) 14.12376244999999) ((Concept will) 14.12376244999999) ((Concept soon) 14.12376244999999) ((Concept reach) 14.12376244999999) ((Concept abel_tesfa) 101.58273399542671) ((Concept what) 84.03499999999997) ((Concept point) 84.03499999999997) ((Concept agi) 101.54987781424497) ((Concept tho) 84.03499999999997) ((Concept gonna) 84.03499999999997) ((Concept take) 84.03499999999997) ((Concept human) 84.03499999999997) ((Concept jobs) 84.03499999999997) ((Concept why) 84.03499999999997))
+------------------------------------------------------------
+[2026-08-26 10:17:04] [HISTORY_FILTER]
+  mode: AF_ATTENTION_FILTERED
+  active_af_concepts: ['why', 'tell', 'will', 'detail', 'soon', 'take', 'about', 'words', 'tho', 'agi', 'least', 'point', 'okay', 'hmm', 'what', 'reach', 'human', 'gonna', 'think', 'llms', 'abel_tesfa', 'then', 'jobs', 'please']
+  total_entries_in_history: 5
+  af_matched_entries_count: 5
+  total_entries_in_prompt: 5
+  raw_history_chars: 3000
+  output_chars: 2999
+------------------------------------------------------------
+[2026-08-26 10:17:12] [ATTENTION_DECAY]
+  af_before_decay: (((Concept tell) 3.391115364244997) ((Concept about) 3.4568277266085303) ((Concept detail) 3.391115364244997) ((Concept please) 3.391115364244997) ((Concept least) 3.391115364244997) ((Concept words) 3.391115364244997) ((Concept hmm) 14.12376244999999) ((Concept okay) 14.12376244999999) ((Concept then) 14.12376244999999) ((Concept think) 14.12376244999999) ((Concept llms) 14.12376244999999) ((Concept will) 14.12376244999999) ((Concept soon) 14.12376244999999) ((Concept reach) 14.12376244999999) ((Concept abel_tesfa) 101.58273399542671) ((Concept what) 84.03499999999997) ((Concept point) 84.03499999999997) ((Concept agi) 101.54987781424497) ((Concept tho) 84.03499999999997) ((Concept gonna) 84.03499999999997) ((Concept take) 84.03499999999997) ((Concept human) 84.03499999999997) ((Concept jobs) 84.03499999999997) ((Concept why) 84.03499999999997))
+  af_after_decay: (((Concept tell) 2.3737807549714978) ((Concept about) 2.419779408625971) ((Concept detail) 2.3737807549714978) ((Concept please) 2.3737807549714978) ((Concept least) 2.3737807549714978) ((Concept words) 2.3737807549714978) ((Concept hmm) 9.886633714999993) ((Concept okay) 9.886633714999993) ((Concept then) 9.886633714999993) ((Concept think) 9.886633714999993) ((Concept llms) 9.886633714999993) ((Concept will) 9.886633714999993) ((Concept soon) 9.886633714999993) ((Concept reach) 9.886633714999993) ((Concept abel_tesfa) 71.10791379679868) ((Concept what) 58.82449999999997) ((Concept point) 58.82449999999997) ((Concept agi) 71.08491446997147) ((Concept tho) 58.82449999999997) ((Concept gonna) 58.82449999999997) ((Concept take) 58.82449999999997) ((Concept human) 58.82449999999997) ((Concept jobs) 58.82449999999997) ((Concept why) 58.82449999999997))
+------------------------------------------------------------
+[2026-08-26 10:17:12] [HISTORY_FILTER]
+  mode: AF_ATTENTION_FILTERED
+  active_af_concepts: ['why', 'tell', 'will', 'detail', 'soon', 'take', 'about', 'words', 'tho', 'agi', 'least', 'point', 'okay', 'hmm', 'what', 'reach', 'human', 'gonna', 'think', 'llms', 'abel_tesfa', 'then', 'jobs', 'please']
+  total_entries_in_history: 5
+  af_matched_entries_count: 5
+  total_entries_in_prompt: 5
+  raw_history_chars: 3000
+  output_chars: 2999
+------------------------------------------------------------
+[2026-08-26 10:17:30] [ATTENTION_DECAY]
+  af_before_decay: (((Concept tell) 2.3737807549714978) ((Concept about) 2.419779408625971) ((Concept detail) 2.3737807549714978) ((Concept please) 2.3737807549714978) ((Concept least) 2.3737807549714978) ((Concept words) 2.3737807549714978) ((Concept hmm) 9.886633714999993) ((Concept okay) 9.886633714999993) ((Concept then) 9.886633714999993) ((Concept think) 9.886633714999993) ((Concept llms) 9.886633714999993) ((Concept will) 9.886633714999993) ((Concept soon) 9.886633714999993) ((Concept reach) 9.886633714999993) ((Concept abel_tesfa) 71.10791379679868) ((Concept what) 58.82449999999997) ((Concept point) 58.82449999999997) ((Concept agi) 71.08491446997147) ((Concept tho) 58.82449999999997) ((Concept gonna) 58.82449999999997) ((Concept take) 58.82449999999997) ((Concept human) 58.82449999999997) ((Concept jobs) 58.82449999999997) ((Concept why) 58.82449999999997))
+  af_after_decay: (((Concept tell) 1.6616465284800483) ((Concept about) 1.6938455860381796) ((Concept detail) 1.6616465284800483) ((Concept please) 1.6616465284800483) ((Concept least) 1.6616465284800483) ((Concept words) 1.6616465284800483) ((Concept hmm) 6.920643600499995) ((Concept okay) 6.920643600499995) ((Concept then) 6.920643600499995) ((Concept think) 6.920643600499995) ((Concept llms) 6.920643600499995) ((Concept will) 6.920643600499995) ((Concept soon) 6.920643600499995) ((Concept reach) 6.920643600499995) ((Concept abel_tesfa) 49.775539657759076) ((Concept what) 41.177149999999976) ((Concept point) 41.177149999999976) ((Concept agi) 49.759440128980025) ((Concept tho) 41.177149999999976) ((Concept gonna) 41.177149999999976) ((Concept take) 41.177149999999976) ((Concept human) 41.177149999999976) ((Concept jobs) 41.177149999999976) ((Concept why) 41.177149999999976))
+------------------------------------------------------------
+[2026-08-26 10:17:30] [HISTORY_FILTER]
+  mode: AF_ATTENTION_FILTERED
+  active_af_concepts: ['why', 'tell', 'will', 'detail', 'soon', 'take', 'about', 'words', 'tho', 'agi', 'least', 'point', 'okay', 'hmm', 'what', 'reach', 'human', 'gonna', 'think', 'llms', 'abel_tesfa', 'then', 'jobs', 'please']
+  total_entries_in_history: 6
+  af_matched_entries_count: 6
+  total_entries_in_prompt: 6
+  raw_history_chars: 3000
+  output_chars: 2999
+------------------------------------------------------------
+[2026-08-26 10:17:39] [ATTENTION_DECAY]
+  af_before_decay: (((Concept tell) 1.6616465284800483) ((Concept about) 1.6938455860381796) ((Concept detail) 1.6616465284800483) ((Concept please) 1.6616465284800483) ((Concept least) 1.6616465284800483) ((Concept words) 1.6616465284800483) ((Concept hmm) 6.920643600499995) ((Concept okay) 6.920643600499995) ((Concept then) 6.920643600499995) ((Concept think) 6.920643600499995) ((Concept llms) 6.920643600499995) ((Concept will) 6.920643600499995) ((Concept soon) 6.920643600499995) ((Concept reach) 6.920643600499995) ((Concept abel_tesfa) 49.775539657759076) ((Concept what) 41.177149999999976) ((Concept point) 41.177149999999976) ((Concept agi) 49.759440128980025) ((Concept tho) 41.177149999999976) ((Concept gonna) 41.177149999999976) ((Concept take) 41.177149999999976) ((Concept human) 41.177149999999976) ((Concept jobs) 41.177149999999976) ((Concept why) 41.177149999999976))
+  af_after_decay: (((Concept tell) 1.1631525699360337) ((Concept about) 1.1856919102267256) ((Concept detail) 1.1631525699360337) ((Concept please) 1.1631525699360337) ((Concept least) 1.1631525699360337) ((Concept words) 1.1631525699360337) ((Concept hmm) 4.844450520349996) ((Concept okay) 4.844450520349996) ((Concept then) 4.844450520349996) ((Concept think) 4.844450520349996) ((Concept llms) 4.844450520349996) ((Concept will) 4.844450520349996) ((Concept soon) 4.844450520349996) ((Concept reach) 4.844450520349996) ((Concept abel_tesfa) 34.84287776043135) ((Concept what) 28.824004999999982) ((Concept point) 28.824004999999982) ((Concept agi) 34.83160809028602) ((Concept tho) 28.824004999999982) ((Concept gonna) 28.824004999999982) ((Concept take) 28.824004999999982) ((Concept human) 28.824004999999982) ((Concept jobs) 28.824004999999982) ((Concept why) 28.824004999999982))
+------------------------------------------------------------
+[2026-08-26 10:17:39] [HISTORY_FILTER]
+  mode: AF_ATTENTION_FILTERED
+  active_af_concepts: ['why', 'tell', 'will', 'detail', 'soon', 'take', 'about', 'words', 'tho', 'agi', 'least', 'point', 'okay', 'hmm', 'what', 'reach', 'human', 'gonna', 'think', 'llms', 'abel_tesfa', 'then', 'jobs', 'please']
+  total_entries_in_history: 6
+  af_matched_entries_count: 6
+  total_entries_in_prompt: 6
+  raw_history_chars: 3000
+  output_chars: 2999
+------------------------------------------------------------
+[2026-08-26 10:17:48] [ATTENTION_DECAY]
+  af_before_decay: (((Concept tell) 1.1631525699360337) ((Concept about) 1.1856919102267256) ((Concept detail) 1.1631525699360337) ((Concept please) 1.1631525699360337) ((Concept least) 1.1631525699360337) ((Concept words) 1.1631525699360337) ((Concept hmm) 4.844450520349996) ((Concept okay) 4.844450520349996) ((Concept then) 4.844450520349996) ((Concept think) 4.844450520349996) ((Concept llms) 4.844450520349996) ((Concept will) 4.844450520349996) ((Concept soon) 4.844450520349996) ((Concept reach) 4.844450520349996) ((Concept abel_tesfa) 34.84287776043135) ((Concept what) 28.824004999999982) ((Concept point) 28.824004999999982) ((Concept agi) 34.83160809028602) ((Concept tho) 28.824004999999982) ((Concept gonna) 28.824004999999982) ((Concept take) 28.824004999999982) ((Concept human) 28.824004999999982) ((Concept jobs) 28.824004999999982) ((Concept why) 28.824004999999982))
+  af_after_decay: (((Concept hmm) 3.391115364244997) ((Concept okay) 3.391115364244997) ((Concept then) 3.391115364244997) ((Concept think) 3.391115364244997) ((Concept llms) 3.391115364244997) ((Concept will) 3.391115364244997) ((Concept soon) 3.391115364244997) ((Concept reach) 3.391115364244997) ((Concept abel_tesfa) 24.390014432301943) ((Concept what) 20.176803499999988) ((Concept point) 20.176803499999988) ((Concept agi) 24.38212566320021) ((Concept tho) 20.176803499999988) ((Concept gonna) 20.176803499999988) ((Concept take) 20.176803499999988) ((Concept human) 20.176803499999988) ((Concept jobs) 20.176803499999988) ((Concept why) 20.176803499999988))
+------------------------------------------------------------
+[2026-08-26 10:17:48] [HISTORY_FILTER]
+  mode: AF_ATTENTION_FILTERED
+  active_af_concepts: ['why', 'then', 'reach', 'agi', 'will', 'jobs', 'human', 'gonna', 'think', 'llms', 'okay', 'hmm', 'soon', 'abel_tesfa', 'what', 'point', 'take', 'tho']
+  total_entries_in_history: 5
+  af_matched_entries_count: 5
+  total_entries_in_prompt: 5
+  raw_history_chars: 3000
+  output_chars: 2999
+------------------------------------------------------------
+[2026-08-26 10:17:56] [ATTENTION_DECAY]
+  af_before_decay: (((Concept hmm) 3.391115364244997) ((Concept okay) 3.391115364244997) ((Concept then) 3.391115364244997) ((Concept think) 3.391115364244997) ((Concept llms) 3.391115364244997) ((Concept will) 3.391115364244997) ((Concept soon) 3.391115364244997) ((Concept reach) 3.391115364244997) ((Concept abel_tesfa) 24.390014432301943) ((Concept what) 20.176803499999988) ((Concept point) 20.176803499999988) ((Concept agi) 24.38212566320021) ((Concept tho) 20.176803499999988) ((Concept gonna) 20.176803499999988) ((Concept take) 20.176803499999988) ((Concept human) 20.176803499999988) ((Concept jobs) 20.176803499999988) ((Concept why) 20.176803499999988))
+  af_after_decay: (((Concept hmm) 2.3737807549714978) ((Concept okay) 2.3737807549714978) ((Concept then) 2.3737807549714978) ((Concept think) 2.3737807549714978) ((Concept llms) 2.3737807549714978) ((Concept will) 2.3737807549714978) ((Concept soon) 2.3737807549714978) ((Concept reach) 2.3737807549714978) ((Concept abel_tesfa) 17.07301010261136) ((Concept what) 14.12376244999999) ((Concept point) 14.12376244999999) ((Concept agi) 17.067487964240147) ((Concept tho) 14.12376244999999) ((Concept gonna) 14.12376244999999) ((Concept take) 14.12376244999999) ((Concept human) 14.12376244999999) ((Concept jobs) 14.12376244999999) ((Concept why) 14.12376244999999))
+------------------------------------------------------------
+[2026-08-26 10:17:56] [HISTORY_FILTER]
+  mode: AF_ATTENTION_FILTERED
+  active_af_concepts: ['why', 'then', 'reach', 'agi', 'will', 'jobs', 'human', 'gonna', 'think', 'llms', 'okay', 'hmm', 'soon', 'abel_tesfa', 'what', 'point', 'take', 'tho']
+  total_entries_in_history: 5
+  af_matched_entries_count: 5
+  total_entries_in_prompt: 5
+  raw_history_chars: 3000
+  output_chars: 2999
+------------------------------------------------------------
+[2026-08-26 10:18:10] [ATTENTION_DECAY]
+  af_before_decay: (((Concept hmm) 2.3737807549714978) ((Concept okay) 2.3737807549714978) ((Concept then) 2.3737807549714978) ((Concept think) 2.3737807549714978) ((Concept llms) 2.3737807549714978) ((Concept will) 2.3737807549714978) ((Concept soon) 2.3737807549714978) ((Concept reach) 2.3737807549714978) ((Concept abel_tesfa) 17.07301010261136) ((Concept what) 14.12376244999999) ((Concept point) 14.12376244999999) ((Concept agi) 17.067487964240147) ((Concept tho) 14.12376244999999) ((Concept gonna) 14.12376244999999) ((Concept take) 14.12376244999999) ((Concept human) 14.12376244999999) ((Concept jobs) 14.12376244999999) ((Concept why) 14.12376244999999))
+  af_after_decay: (((Concept hmm) 1.6616465284800483) ((Concept okay) 1.6616465284800483) ((Concept then) 1.6616465284800483) ((Concept think) 1.6616465284800483) ((Concept llms) 1.6616465284800483) ((Concept will) 1.6616465284800483) ((Concept soon) 1.6616465284800483) ((Concept reach) 1.6616465284800483) ((Concept abel_tesfa) 11.95110707182795) ((Concept what) 9.886633714999993) ((Concept point) 9.886633714999993) ((Concept agi) 11.947241574968102) ((Concept tho) 9.886633714999993) ((Concept gonna) 9.886633714999993) ((Concept take) 9.886633714999993) ((Concept human) 9.886633714999993) ((Concept jobs) 9.886633714999993) ((Concept why) 9.886633714999993))
+------------------------------------------------------------
+[2026-08-26 10:18:10] [HISTORY_FILTER]
+  mode: AF_ATTENTION_FILTERED
+  active_af_concepts: ['why', 'then', 'reach', 'agi', 'will', 'jobs', 'human', 'gonna', 'think', 'llms', 'okay', 'hmm', 'soon', 'abel_tesfa', 'what', 'point', 'take', 'tho']
+  total_entries_in_history: 5
+  af_matched_entries_count: 5
+  total_entries_in_prompt: 5
+  raw_history_chars: 3000
+  output_chars: 2999
+------------------------------------------------------------
+[2026-08-26 10:18:18] [ATTENTION_DECAY]
+  af_before_decay: (((Concept hmm) 1.6616465284800483) ((Concept okay) 1.6616465284800483) ((Concept then) 1.6616465284800483) ((Concept think) 1.6616465284800483) ((Concept llms) 1.6616465284800483) ((Concept will) 1.6616465284800483) ((Concept soon) 1.6616465284800483) ((Concept reach) 1.6616465284800483) ((Concept abel_tesfa) 11.95110707182795) ((Concept what) 9.886633714999993) ((Concept point) 9.886633714999993) ((Concept agi) 11.947241574968102) ((Concept tho) 9.886633714999993) ((Concept gonna) 9.886633714999993) ((Concept take) 9.886633714999993) ((Concept human) 9.886633714999993) ((Concept jobs) 9.886633714999993) ((Concept why) 9.886633714999993))
+  af_after_decay: (((Concept hmm) 1.1631525699360337) ((Concept okay) 1.1631525699360337) ((Concept then) 1.1631525699360337) ((Concept think) 1.1631525699360337) ((Concept llms) 1.1631525699360337) ((Concept will) 1.1631525699360337) ((Concept soon) 1.1631525699360337) ((Concept reach) 1.1631525699360337) ((Concept abel_tesfa) 8.365774950279565) ((Concept what) 6.920643600499995) ((Concept point) 6.920643600499995) ((Concept agi) 8.36306910247767) ((Concept tho) 6.920643600499995) ((Concept gonna) 6.920643600499995) ((Concept take) 6.920643600499995) ((Concept human) 6.920643600499995) ((Concept jobs) 6.920643600499995) ((Concept why) 6.920643600499995))
+------------------------------------------------------------
+[2026-08-26 10:18:18] [HISTORY_FILTER]
+  mode: AF_ATTENTION_FILTERED
+  active_af_concepts: ['why', 'then', 'reach', 'agi', 'will', 'jobs', 'human', 'gonna', 'think', 'llms', 'okay', 'hmm', 'soon', 'abel_tesfa', 'what', 'point', 'take', 'tho']
+  total_entries_in_history: 5
+  af_matched_entries_count: 5
+  total_entries_in_prompt: 5
+  raw_history_chars: 3000
+  output_chars: 2999
+------------------------------------------------------------
+[2026-08-26 10:18:25] [ATTENTION_DECAY]
+  af_before_decay: (((Concept hmm) 1.1631525699360337) ((Concept okay) 1.1631525699360337) ((Concept then) 1.1631525699360337) ((Concept think) 1.1631525699360337) ((Concept llms) 1.1631525699360337) ((Concept will) 1.1631525699360337) ((Concept soon) 1.1631525699360337) ((Concept reach) 1.1631525699360337) ((Concept abel_tesfa) 8.365774950279565) ((Concept what) 6.920643600499995) ((Concept point) 6.920643600499995) ((Concept agi) 8.36306910247767) ((Concept tho) 6.920643600499995) ((Concept gonna) 6.920643600499995) ((Concept take) 6.920643600499995) ((Concept human) 6.920643600499995) ((Concept jobs) 6.920643600499995) ((Concept why) 6.920643600499995))
+  af_after_decay: (((Concept abel_tesfa) 5.856042465195696) ((Concept what) 4.844450520349996) ((Concept point) 4.844450520349996) ((Concept agi) 5.854148371734369) ((Concept tho) 4.844450520349996) ((Concept gonna) 4.844450520349996) ((Concept take) 4.844450520349996) ((Concept human) 4.844450520349996) ((Concept jobs) 4.844450520349996) ((Concept why) 4.844450520349996))
+------------------------------------------------------------
+[2026-08-26 10:18:25] [HISTORY_FILTER]
+  mode: AF_ATTENTION_FILTERED
+  active_af_concepts: ['why', 'agi', 'jobs', 'human', 'gonna', 'abel_tesfa', 'point', 'what', 'take', 'tho']
+  total_entries_in_history: 5
+  af_matched_entries_count: 5
+  total_entries_in_prompt: 5
+  raw_history_chars: 3000
+  output_chars: 2999
+------------------------------------------------------------
+[2026-08-26 10:18:33] [ATTENTION_DECAY]
+  af_before_decay: (((Concept abel_tesfa) 5.856042465195696) ((Concept what) 4.844450520349996) ((Concept point) 4.844450520349996) ((Concept agi) 5.854148371734369) ((Concept tho) 4.844450520349996) ((Concept gonna) 4.844450520349996) ((Concept take) 4.844450520349996) ((Concept human) 4.844450520349996) ((Concept jobs) 4.844450520349996) ((Concept why) 4.844450520349996))
+  af_after_decay: (((Concept abel_tesfa) 4.099229725636987) ((Concept what) 3.391115364244997) ((Concept point) 3.391115364244997) ((Concept agi) 4.097903860214058) ((Concept tho) 3.391115364244997) ((Concept gonna) 3.391115364244997) ((Concept take) 3.391115364244997) ((Concept human) 3.391115364244997) ((Concept jobs) 3.391115364244997) ((Concept why) 3.391115364244997))
+------------------------------------------------------------
+[2026-08-26 10:18:33] [HISTORY_FILTER]
+  mode: AF_ATTENTION_FILTERED
+  active_af_concepts: ['why', 'agi', 'jobs', 'human', 'gonna', 'abel_tesfa', 'point', 'what', 'take', 'tho']
+  total_entries_in_history: 5
+  af_matched_entries_count: 5
+  total_entries_in_prompt: 5
+  raw_history_chars: 3000
+  output_chars: 2999
+------------------------------------------------------------
+[2026-08-26 10:18:41] [ATTENTION_DECAY]
+  af_before_decay: (((Concept abel_tesfa) 4.099229725636987) ((Concept what) 3.391115364244997) ((Concept point) 3.391115364244997) ((Concept agi) 4.097903860214058) ((Concept tho) 3.391115364244997) ((Concept gonna) 3.391115364244997) ((Concept take) 3.391115364244997) ((Concept human) 3.391115364244997) ((Concept jobs) 3.391115364244997) ((Concept why) 3.391115364244997))
+  af_after_decay: (((Concept abel_tesfa) 2.8694608079458908) ((Concept what) 2.3737807549714978) ((Concept point) 2.3737807549714978) ((Concept agi) 2.86853270214984) ((Concept tho) 2.3737807549714978) ((Concept gonna) 2.3737807549714978) ((Concept take) 2.3737807549714978) ((Concept human) 2.3737807549714978) ((Concept jobs) 2.3737807549714978) ((Concept why) 2.3737807549714978))
+------------------------------------------------------------
+[2026-08-26 10:18:41] [HISTORY_FILTER]
+  mode: AF_ATTENTION_FILTERED
+  active_af_concepts: ['why', 'agi', 'jobs', 'human', 'gonna', 'abel_tesfa', 'point', 'what', 'take', 'tho']
+  total_entries_in_history: 5
+  af_matched_entries_count: 5
+  total_entries_in_prompt: 5
+  raw_history_chars: 3000
+  output_chars: 2999
+------------------------------------------------------------
+[2026-08-26 10:18:48] [ATTENTION_DECAY]
+  af_before_decay: (((Concept abel_tesfa) 2.8694608079458908) ((Concept what) 2.3737807549714978) ((Concept point) 2.3737807549714978) ((Concept agi) 2.86853270214984) ((Concept tho) 2.3737807549714978) ((Concept gonna) 2.3737807549714978) ((Concept take) 2.3737807549714978) ((Concept human) 2.3737807549714978) ((Concept jobs) 2.3737807549714978) ((Concept why) 2.3737807549714978))
+  af_after_decay: (((Concept abel_tesfa) 2.0086225655621233) ((Concept what) 1.6616465284800483) ((Concept point) 1.6616465284800483) ((Concept agi) 2.007972891504888) ((Concept tho) 1.6616465284800483) ((Concept gonna) 1.6616465284800483) ((Concept take) 1.6616465284800483) ((Concept human) 1.6616465284800483) ((Concept jobs) 1.6616465284800483) ((Concept why) 1.6616465284800483))
+------------------------------------------------------------
+[2026-08-26 10:18:48] [HISTORY_FILTER]
+  mode: AF_ATTENTION_FILTERED
+  active_af_concepts: ['why', 'agi', 'jobs', 'human', 'gonna', 'abel_tesfa', 'point', 'what', 'take', 'tho']
+  total_entries_in_history: 5
+  af_matched_entries_count: 5
+  total_entries_in_prompt: 5
+  raw_history_chars: 3000
+  output_chars: 2999
+------------------------------------------------------------
+[2026-08-26 10:18:56] [ATTENTION_DECAY]
+  af_before_decay: (((Concept abel_tesfa) 2.0086225655621233) ((Concept what) 1.6616465284800483) ((Concept point) 1.6616465284800483) ((Concept agi) 2.007972891504888) ((Concept tho) 1.6616465284800483) ((Concept gonna) 1.6616465284800483) ((Concept take) 1.6616465284800483) ((Concept human) 1.6616465284800483) ((Concept jobs) 1.6616465284800483) ((Concept why) 1.6616465284800483))
+  af_after_decay: (((Concept abel_tesfa) 1.4060357958934862) ((Concept what) 1.1631525699360337) ((Concept point) 1.1631525699360337) ((Concept agi) 1.4055810240534214) ((Concept tho) 1.1631525699360337) ((Concept gonna) 1.1631525699360337) ((Concept take) 1.1631525699360337) ((Concept human) 1.1631525699360337) ((Concept jobs) 1.1631525699360337) ((Concept why) 1.1631525699360337))
+------------------------------------------------------------
+[2026-08-26 10:18:56] [HISTORY_FILTER]
+  mode: AF_ATTENTION_FILTERED
+  active_af_concepts: ['why', 'agi', 'jobs', 'human', 'gonna', 'abel_tesfa', 'point', 'what', 'take', 'tho']
+  total_entries_in_history: 5
+  af_matched_entries_count: 5
+  total_entries_in_prompt: 5
+  raw_history_chars: 3000
+  output_chars: 2999
+------------------------------------------------------------
+[2026-08-26 10:19:08] [ATTENTION_DECAY]
+  af_before_decay: (((Concept abel_tesfa) 1.4060357958934862) ((Concept what) 1.1631525699360337) ((Concept point) 1.1631525699360337) ((Concept agi) 1.4055810240534214) ((Concept tho) 1.1631525699360337) ((Concept gonna) 1.1631525699360337) ((Concept take) 1.1631525699360337) ((Concept human) 1.1631525699360337) ((Concept jobs) 1.1631525699360337) ((Concept why) 1.1631525699360337))
+  af_after_decay: none
+------------------------------------------------------------
+[2026-08-26 10:19:08] [HISTORY_FILTER]
+  mode: FALLBACK_RECENT_ONLY
+  active_af_concepts: none
+  total_entries_in_history: 5
+  kept_entries_count: 2
+  raw_history_chars: 3000
+  output_chars: 1355
+------------------------------------------------------------
+[2026-08-26 10:19:21] [HISTORY_FILTER]
+  mode: FALLBACK_RECENT_ONLY
+  active_af_concepts: none
+  total_entries_in_history: 5
+  kept_entries_count: 2
+  raw_history_chars: 3000
+  output_chars: 1355
+------------------------------------------------------------
+[2026-08-26 10:19:28] [HISTORY_FILTER]
+  mode: FALLBACK_RECENT_ONLY
+  active_af_concepts: none
+  total_entries_in_history: 5
+  kept_entries_count: 2
+  raw_history_chars: 3000
+  output_chars: 1355
+------------------------------------------------------------
+[2026-08-26 10:19:35] [HISTORY_FILTER]
+  mode: FALLBACK_RECENT_ONLY
+  active_af_concepts: none
+  total_entries_in_history: 5
+  kept_entries_count: 2
+  raw_history_chars: 3000
+  output_chars: 1355
+------------------------------------------------------------
+[2026-08-26 10:19:42] [HISTORY_FILTER]
+  mode: FALLBACK_RECENT_ONLY
+  active_af_concepts: none
+  total_entries_in_history: 5
+  kept_entries_count: 2
+  raw_history_chars: 3000
+  output_chars: 1355
+------------------------------------------------------------
+[2026-08-26 10:19:56] [HISTORY_FILTER]
+  mode: FALLBACK_RECENT_ONLY
+  active_af_concepts: none
+  total_entries_in_history: 5
+  kept_entries_count: 2
+  raw_history_chars: 3000
+  output_chars: 1355
+------------------------------------------------------------

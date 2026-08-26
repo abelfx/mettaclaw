@@ -10,11 +10,11 @@
 
 (= (initMemory)
    (progn (println! "Initializing memory")
-          (configure maxFeedback 50000)
+          (configure maxFeedback 3000)
           (configure maxRecallItems 10)
           (configure maxSimilarityRecall 10)
           (configure maxEpisodeRecallLines 20)
-          (configure maxHistory 30000)
+          (configure maxHistory 3000)
           (configure embeddingprovider OpenAI) ;OpenAI or Local
           (configure promotionInflationFactor 10)
           (configure mostPromotedMemories 10)

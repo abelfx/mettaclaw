@@ -1,4 +1,20 @@
-import os, openai
+import os, sys, time, openai
+
+# Ensure all mettaclaw and ECAN directories are in sys.path
+_base_dir = os.path.dirname(os.path.abspath(__file__))
+_ecan_dir = os.path.abspath(os.path.join(_base_dir, "../../../metta-attention"))
+for _p in [
+    _base_dir,
+    os.path.join(_base_dir, "src"),
+    os.path.join(_base_dir, "channels"),
+    os.path.join(os.path.dirname(_base_dir), "petta_lib_chromadb"),
+    os.path.join(_ecan_dir, "attention/ImportanceDiffusionAgent"),
+    os.path.join(_ecan_dir, "attention/ImportanceDiffusionAgent/fluidDiffusion"),
+    os.path.join(_ecan_dir, "attention-bank/utilities"),
+    os.path.join(_ecan_dir, "synapse")
+]:
+    if os.path.exists(_p) and _p not in sys.path:
+        sys.path.insert(0, _p)
 
 OPENROUTER_CLIENT = openai.OpenAI(
     api_key=os.environ.get("OPENROUTER_API_KEY") or "dummy",
