@@ -65,12 +65,8 @@ def _decode_metta(s):
 
 # --- Chunking ------------------------------------------------------------
 
-def _chunk_markdown(text, filename):
-    """Heading-aware markdown chunking with breadcrumb tracking."""
-    matches = list(HEADING_RE.finditer(text))
-    if not matches:
-        return [{"text": text.strip(), "breadcrumb": filename}]
-
+def _sections_from_headings(text, filename, matches):
+    """Split on headings and merge sections under MIN_CHUNK_CHARS."""
     sections = []
     stack = {}  # level -> heading text
 
@@ -115,6 +111,19 @@ def _chunk_markdown(text, filename):
             merged[-1]["text"] += "\n\n" + carry
         else:
             merged.append({"text": carry, "breadcrumb": carry_bc})
+
+    return merged
+
+
+def _chunk_markdown(text, filename):
+    """Heading-aware markdown chunking with breadcrumb tracking."""
+    matches = list(HEADING_RE.finditer(text))
+    if matches:
+        merged = _sections_from_headings(text, filename, matches)
+    else:
+        # No headings: one section, still goes through the size pass below.
+        logger.warning(f"{filename}: no headings, chunking on paragraphs")
+        merged = [{"text": text.strip(), "breadcrumb": filename}]
 
     # Split large sections on paragraph boundaries
     final = []
