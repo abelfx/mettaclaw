@@ -46,7 +46,7 @@ def _get_collection():
 
 # --- Helpers -------------------------------------------------------------
 
-HEADING_RE = re.compile(r"^(#{1,4})\s+(.+)$", re.MULTILINE)
+HEADING_RE = re.compile(r"^(#{1,4})[ \t]+(.+)$", re.MULTILINE)
 
 
 def _resolve_knowledge_dir():
@@ -88,6 +88,11 @@ def _sections_from_headings(text, filename, matches):
     """Split on headings and merge sections under MIN_CHUNK_CHARS."""
     sections = []
     stack = {}  # level -> heading text
+
+    # Text before the first heading belongs to no section, so add it as one.
+    preamble = text[:matches[0].start()].strip()
+    if preamble:
+        sections.append({"text": preamble, "breadcrumb": filename, "heading": ""})
 
     for i, m in enumerate(matches):
         level = len(m.group(1))
@@ -154,7 +159,8 @@ def _chunk_markdown(text, filename):
         paragraphs = s["text"].split("\n\n")
         chunk_text = ""
         for p in paragraphs:
-            if chunk_text and len(chunk_text) + len(p) > MAX_CHUNK_CHARS:
+            # Count the "\n\n" join, else the chunk overshoots and leaves a fragment.
+            if chunk_text and len(chunk_text) + 2 + len(p) > MAX_CHUNK_CHARS:
                 pieces = _cut_to_limit(chunk_text, s["breadcrumb"])
                 hard_cuts += len(pieces) - 1
                 final.extend(pieces)
