@@ -118,6 +118,37 @@ def test_heading_structure_and_breadcrumbs_are_preserved(rag):
     ]
 
 
+def test_paragraph_join_does_not_leave_a_fragment(rag):
+    # Two paragraphs landing within the "\n\n" join of the cap.
+    a = " ".join(["word"] * 600)
+    b = " ".join(["word"] * 600) + "s"
+    chunks = rag._chunk_markdown("# H\n\n" + a + "\n\n" + b, "t.md")
+
+    assert [len(c["text"]) for c in chunks] == [2999, 3000]
+
+
+def test_text_before_the_first_heading_is_kept(rag):
+    doc = "Text before the first heading.\n\n# Heading\n\nText after the heading.\n"
+    chunks = rag._chunk_markdown(doc, "t.md")
+
+    assert "Text before the first heading." in " ".join(c["text"] for c in chunks)
+
+
+def test_long_preamble_becomes_its_own_section(rag):
+    preamble = "a" * 500
+    chunks = rag._chunk_markdown(preamble + "\n\n# Heading\n\n" + "b" * 500, "t.md")
+
+    assert chunks[0] == {"text": preamble, "breadcrumb": "t.md"}
+    assert chunks[1]["breadcrumb"] == "t.md > Heading"
+
+
+def test_bare_hash_line_is_not_a_heading(rag):
+    chunks = rag._chunk_markdown("Body text.\n\n#\n35\n", "t.md")
+
+    assert {c["breadcrumb"] for c in chunks} == {"t.md"}
+    assert "35" in " ".join(c["text"] for c in chunks)
+
+
 def test_warns_when_a_file_has_no_headings(rag, caplog):
     with caplog.at_level(logging.WARNING):
         rag._chunk_markdown(("word " * 3000 + "\n\n") * 8, "plain.md")
