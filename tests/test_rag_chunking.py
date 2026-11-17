@@ -144,6 +144,24 @@ def test_short_preamble_keeps_the_heading_breadcrumb(rag):
     assert "Short line." in chunks[0]["text"]
 
 
+def test_short_section_merges_into_the_next_with_its_own_breadcrumb(rag):
+    chunks = rag._chunk_markdown("# A\n\nshort\n\n# B\n\n" + "b" * 500, "t.md")
+
+    assert [c["breadcrumb"] for c in chunks] == ["t.md > A"]
+    assert "short" in chunks[0]["text"]
+    assert "b" * 500 in chunks[0]["text"]
+
+
+def test_short_preamble_and_short_section_keep_the_first_heading_breadcrumb(rag):
+    chunks = rag._chunk_markdown(
+        "Short line.\n\n# A\n\nshort\n\n# B\n\n" + "b" * 500, "t.md"
+    )
+
+    assert [c["breadcrumb"] for c in chunks] == ["t.md > A"]
+    assert "Short line." in chunks[0]["text"]
+    assert "short" in chunks[0]["text"]
+
+
 def test_long_preamble_becomes_its_own_section(rag):
     preamble = "a" * 500
     chunks = rag._chunk_markdown(preamble + "\n\n# Heading\n\n" + "b" * 500, "t.md")
